@@ -1,0 +1,545 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<meta http-equiv="X-UA-Compatible" content="ie=edge">
+	<title>Zodiac</title>
+	<link rel="stylesheet" href="normalize.css">
+	<link rel="stylesheet" href="main.css">
+</head>
+<body>
+		<div class="music" id="music">
+				<img class="music-button" id="music-button" src="images/playbutton.png" alt="Play Button">
+		</div>
+		<div class="help" id="help">
+				<button class="question TextBox" id="question" onclick="display('profoak')"> Help </button>
+
+		</div>
+	<header>
+		<h1>What up, succa?</h1>
+		<p class="description"> Input your name and birthday to discover your succulent type!</p>
+	</header>
+	<main>
+		<div class="form" id="form">
+				<form action="index.html" method="post" name="form" id="inputform" autocomplete="on">
+						<input type="text" placeholder="First name" name="fName" required>
+						<input id="date" type="date" placeholder="mm/dd/yyyy" name="date" required>
+						<input id="submit" type="submit" value="Submit" required>
+					</form>
+		<p class="feedback TextBox" id="feedback" hidden></p>
+
+ <!-- zodiac result based on succulent match-->
+
+        <!-- Fishbone Orchid (Aries) -->
+        <div class="succEntry" id="fishbone">
+				<div class="row">
+				  <div class="col-2">
+					<div class="succPic">
+					  <img class="succPic" src="images/fishboneorchid-01.png" alt="Fishbone Orchid">
+					</div>
+				  </div>
+	  
+				  <div class="col-2">
+					<div class="succDesc">
+					  Fishbone Orchid <br>
+					  Ric Rac, Zigzag <br>
+					  Fast growing, ambitious. With your climbing stems you know you'll go far in life. You are fierce on the outside but gentle on the inside - your outer petals are dark violet, and inner white petals.
+				  </div>
+				</div>
+	  
+				<div class="succLine"></div>
+	  
+				<div class="row">
+				  <div class="col-4">
+					<p class="succBox" id="fishRead"></p>
+				  
+					<button class="closeSuccTextBox" onclick="clearZodiac(), showForm()">Close</button>
+				  </div> 
+				</div>
+	  
+			  </div>
+	  
+			  <!-- Snake Plant (Taurus) -->
+			  <div class="succEntry" id="snake">
+				  <div class="row">
+					<div class="col-2">
+					  <div class="succPic">
+						<img class="succPic" src="images/snakeplant-01.png" alt="Snake Plant">
+					  </div>
+					</div>
+		
+					<div class="col-2">
+					  <div class="succDesc">
+						Snake Plant <br>
+						You are simple and anything goes. You are tough on the outside but easily swayed by your feelings and emotions.  
+					  </div>
+					</div>
+				  </div>
+		
+					<div class="succLine"></div>
+	  
+					<div class="row">
+					  <div class="col-4">
+						<p class="succBox" id="snakeRead"></p>
+					  
+						<button class="closeSucc TextBox" onclick="clearZodiac(), showForm()">Close</button>
+					  </div> 
+					</div>
+		
+				  </div>
+	  
+			  <!-- Starfish Cactus (Gemini) -->
+			  <div class="succEntry" id="starfish">
+				  <div class="row">
+					<div class="col-2">
+					  <div class="succPic">
+						<img class="succPic" src="images/starfishcactus-01.png" alt="Starfish Cactus">
+					  </div>
+					</div>
+				  
+		
+					<div class="col-2">
+					  <div class="succDesc">
+						Starfish Cactus <br>
+						(Carrion Flower, Star Flower, Toad Cactus) <br>
+						You are special. Just as your flowers give off an unpleasant smell, others never know what you're up to. You are uniquely attractive - attracting flies and other insects, and it helps pollinate the blooms. 
+					  </div>
+					</div>
+				  </div>
+				  
+					<div class="succLine"></div>
+	  
+					<div class="row">
+					  <div class="col-4">
+						<p class="succBox" id="starRead"></p>
+					  
+						<button class="closeSuccTextBox" onclick="clearZodiac(), showForm()">Close</button>
+					  </div> 
+					</div>
+		
+				  </div>
+	  
+			  <!-- House Leek (Cancer) -->
+			  <div class="succEntry" id="leek">
+				  <div class="row">
+					<div class="col-2">
+					  <div class="succPic">
+						<img class="succPic" src="images/houseleek-01.png" alt="House Leek">
+					  </div>
+					</div>
+				  
+		
+					<div class="col-2">
+					  <div class="succDesc">
+						House Leek <br>
+						(Hen and Chicks, Old Man and Woman, Roof House Leek) <br>
+						You love to care for others. This plant is nicknamed Hen and Chicks because mother plants cluster around its base like chicks. 
+					  </div>
+					</div>
+				  </div>
+				  
+					<div class="succLine"></div>
+	  
+					<div class="row">
+					  <div class="col-4">
+						<p class="succBox" id="leekRead"></p>
+					  
+						<button class="closeSuccTextBox" onclick="clearZodiac(), showForm()">Close</button>
+					  </div> 
+					</div>
+		
+			  </div>
+	  
+			  <!-- Money Plant (Leo) -->
+			  <div class="succEntry" id="money">
+				  <div class="row">
+					<div class="col-2">
+					  <div class="succPic">
+						<img class="succPic" src="images/moneyplant-01.png" alt="Money Plant">
+					  </div>
+					</div>
+				  
+		
+					<div class="col-2">
+					  <div class="succDesc">
+						Money Plant <br>
+						(Jade Plant) <br>
+						You're often considered one of the "old fashioned" of succulents, but don't let that bring you down. It is believed that the energy from this plant comes from its well-rooted energy that brings new growth. You are resilient, and able to thrive in even harsh environments.
+					  </div>
+					</div>
+				  </div>
+				  
+					<div class="sucLine"></div>
+	  
+					<div class="row">
+					  <div class="col-4">
+						<p class="succBox" id="moneyRead"></p>
+					  
+						<button class="closeSuccTextBox" onclick="clearZodiac(), showForm()">Close</button>
+					  </div> 
+					</div>
+		
+				  </div>
+	  
+			  <!-- Easter Cactus (Virgo) -->
+			  <div class="succEntry" id="easter">
+				  <div class="row">
+					<div class="col-2">
+					  <div class="succPic">
+						<img class="succPic" src="images/eastercactus.png" alt="Easter Cactus">
+					  </div>
+					</div>
+				  
+		
+					<div class="col-2">
+					  <div class="succDesc">
+						Easter Cactus <br>
+						(Spring Cactus) <br>
+						You are full of bloom, full of joy. Full of color bursting bright. After winter months, you speak of spring and good times coming, joys ahead. Positive vibes all around. 
+					  </div>
+					</div>
+				  </div>
+				  
+					<div class="succLine"></div>
+	  
+					<div class="row">
+					  <div class="col-4">
+						<p class="succBox" id="easterRead"></p>
+					  
+						<button class="closesuccTextBox" onclick="clearZodiac(), showForm()">Close</button>
+					  </div> 
+					</div>
+		
+				  </div>
+	  
+			  <!-- Mexican Firecracker (Libra) -->
+			  <div class="succEntry" id="firecracker">
+				  <div class="row">
+					<div class="col-2">
+					  <div class="succPic">
+						<img class="succPic" src="images/mexicanfirecracker-01.png" alt="Mexican Firecracker">
+					  </div>
+					</div>
+				  
+		
+					<div class="col-2">
+					  <div class="succDesc">
+						Mexican Firecracker <br>
+						Contrary to its name, this is a slow growing plant. But as it grows, it shoots into many and spreads out. Your time will come, my friend. Slow progress is not no progress. 
+					  </div>
+					</div>
+				  </div>
+				  
+					<div class="succLine"></div>
+	  
+					<div class="row">
+					  <div class="col-4">
+						<p class="succBox" id="firecrackerRead"></p>
+					  
+						<button class="closesuccTextBox" onclick="clearZodiac(), showForm()">Close</button>
+					  </div> 
+					</div>
+		
+				  </div>
+	  
+			  <!-- Shark's Tooth (Scorpio) -->
+			  <div class="succEntry" id="shark">
+				  <div class="row">
+					<div class="col-2">
+					  <div class="succPic">
+						<img class="succPic" src="images/sharkstooth-01.png" alt="Shark's Tooth">
+					  </div>
+					</div>
+				 
+		
+					<div class="col-2">
+					  <div class="succDesc">
+						Shark's Tooth <br>
+						You grow in the wild, dry, rocks. Though you flush red when faced with drought and the heat of the sun, you  endure difficulties with strength. 
+					  </div>
+					</div>
+				  </div>
+				  
+					<div class="succLine"></div>
+	  
+					<div class="row">
+					  <div class="col-4">
+						<p class="succBox" id="sharkRead"></p>
+					  
+						<button class="closesuccTextBox" onclick="clearZodiac(), showForm()">Close</button>
+					  </div> 
+					</div>
+		
+				  </div>
+	  
+			  <!-- String of Buttons (Sagittarius) -->
+			  <div class="succEntry" id="buttonstrings">
+				  <div class="row">
+					<div class="col-2">
+					  <div class="succPic">
+						<img class="succPic" src="images/buttonstrings-01.png" alt="String of Buttons">
+					  </div>
+					</div>
+				  
+		
+					<div class="col-2">
+					  <div class="succDesc">
+						String of Buttons <br>
+						(Baby's Necklace, Necklace Vine, Stacked Crassula) <br>
+						This fast growing plant has rosy edges, which contrasts with its gentle personality. Its colonizing qualities means it is aggressive and wants to spread its influence. 
+					  </div>
+					</div>
+				  </div>
+				  
+					<div class="succLine"></div>
+	  
+					<div class="row">
+					  <div class="col-4">
+						<p class="succBox" id="buttonstringsRead"></p>
+					  
+						<button class="closesuccTextBox" onclick="clearZodiac(), showForm()">Close</button>
+					  </div> 
+					</div>
+		
+				  </div>
+	  
+			  <!-- Zebra Plant (Capricorn) -->
+			  <div class="succEntry" id="zebra">
+				  <div class="row">
+					<div class="col-2">
+					  <div class="succPic">
+						<img class="succPic" src="images/zebraplant-01.png" alt="Zebra Plant">
+					  </div>
+					</div>
+				  
+		
+					<div class="col-2">
+					  <div class="succDesc">
+						Zebra Plant <br>
+						You are no fuss, simple to love and be cared for. You're always a go-to for your unique and cheerful pattern, and you love making people happy. 
+					  </div>
+					</div>
+				  </div>
+				  
+					<div class="succLine"></div>
+	  
+					<div class="row">
+					  <div class="col-4">
+						<p class="succBox" id="zebraRead"></p>
+					  
+						<button class="closesuccTextBox" onclick="clearZodiac(), showForm()">Close</button>
+					  </div> 
+					</div>
+		
+				  </div>
+	  
+	  
+			  <!-- Aloe (Aquarius) -->
+			  <div class="succEntry" id="aloe">
+				  <div class="row">
+					<div class="col-2">
+					  <div class="succic">
+						<img class="succPic" src="images/aloe-01.png" alt="Aloe">
+					  </div>
+					</div>
+				 
+		
+					<div class="col-2">
+					  <div class="succDesc">
+						Aloe <br>
+						You are known to be spiky, spunky, and dramatic. Yet you are attractive and gifted in a lot of things, providing those around you with emotional, mental, and practical love and care.
+					  </div>
+					</div>
+				  </div>
+				  
+					<div class="succLine"></div>
+	  
+					<div class="row">
+					  <div class="col-4">
+						<p class="succBox" id="aloeRead"></p>
+					  
+						<button class="closesuccTextBox" onclick="clearZodiac(), showForm()">Close</button>
+					  </div> 
+					</div>
+		
+				  </div>
+	  
+	  
+			  <!-- Panda (Pisces) -->
+			  <div class="succEntry" id="panda">
+				  <div class="row">
+					<div class="col-2">
+					  <div class="succPic">
+						<img class="succPic" src="images/panda-01.png" alt="Panda Plant">
+					  </div>
+					</div>
+				  
+		
+					<div class="col-2">
+					  <div class="succDesc">
+						Panda Plant <br>
+						(Pussy Ears) <br>
+						You are gentle, kind, soft around the edges. You bring harmony and ease to all you encounter.
+					  </div>
+					</div>
+				  </div>
+	  
+					<div class="succLine"></div>
+	  
+					<div class="row">
+					  <div class="col-4">
+						<p class="succBox" id="pandaRead"></p>
+					  
+						<button class="closesuccTextBox" onclick="clearZodiac(), showForm()">Close</button>
+					  </div>
+					</div>
+		
+				</div>
+	  
+	  
+			  <!-- Help Button -->
+			  <div class="succEntry" id="helpbutton">
+				<div class="row">
+				  <div class="col-2">
+					<div class="succPic">
+					  <img class="succPic" src="images/help.png" alt="Help">
+					</div>
+				  </div>
+	  
+				  <div class="col-2">
+					<div class="succDesc">
+					 Need help?
+					</div>
+				  </div>
+				</div>
+	  
+				<div class="succLine"></div>
+	  
+				<div class="row">
+				  <div class="col-4">
+					<p class="helpbutton" id="helpb"></p>
+	  
+					<div class="inputForm">
+					  <form id="helpInfo">
+						
+						<p class="helpbutton">Type in your first name here:</p>
+						<input type="text" name="firstName" class="succTextBox" placeholder="First Name"><br>
+						<p class="helpbutton">Put in your birthday, in the format MM/DD/YYYY</p>
+						<input type="text" name="birthday" class="succTextBox" placeholder="MM/DD/YYYY"><br>
+			
+						<p class="helpbutton">Sweet! Click the next button to discover your succulent type!</p>
+						<input type="submit" class="submitsuccTextBox" value="Discover your succulent!">
+					  </form>
+			
+					</div>
+					<p class="helpbutton">Now close this box and then enter your info in the form!</p>
+					<button class="closesuccTextBox" onclick="clearZodiac(), showForm()">Close</button>
+				  </div> 
+				</div>
+	  
+			  </div>
+				
+	  
+			  <!--  Buttons at bottom of page --> 
+			  <div class="buttons">
+	  
+				<div class="succbuttons">
+				  <a href="#succBox"><img src="images/fishboneorchid-01.png" alt="Fishbone Orchid" class="succicon" id="fish"></a>
+				  <a href="#succBox"><img src="images/snakeplant-01.png" alt="Snake Plant" class="succicon" id="snakep"></a>
+				  <a href="#succBox"><img src="images/starfishcactus-01.png" alt="Starfish Cactus" class="succicon" id="star"></a>
+				  <a href="#succBox"><img src="images/houseleek-01.png" alt="House Leek" class="succicon" id="hleek"></a>
+				  <a href="#succBox"><img src="images/moneyplant-01.png" alt="Money Plant" class="succicon" id="moneyp"></a>
+				  <a href="#succBox"><img src="images/eastercactus.png" alt="Easter Cactus" class="succicon" id="easterc"></a>
+				</div>
+				
+				<div class="succbuttons">
+				  <a href="#succBox"><img src="images/mexicanfirecracker-01.png" alt="Mexican Firecracker" class="succicon" id="mexican"></a>
+				  <a href="#succBox"><img src="images/sharkstooth-01.png" alt="Shark's Tooth" class="succicon" id="sharks"></a>
+				  <a href="#succBox"><img src="images/buttonstrings-01.png" alt="String of Buttons" class="succicon"  id="string"></a>
+				  <a href="#succBox"><img src="images/zebraplant-01.png" alt="Zebra Plant" class="succicon"  id="zebra"></a>
+				  <a href="#succBox"><img src="images/aloe-01.png" alt="Aloe Plant" class="succicon" id="aloep"></a>
+				  <a href="#succBox"><img src="images/panda-01.png" alt="Panda Plant" class="succicon" id="pandap"></a>
+				</div>
+	  
+				<!-- Audio that plays in the background -->
+				<audio id="appMusic">
+				  <source src="sounds/calm.wav" type="audio/wav">
+				  <source src="sounds/calm.mp3" type="audio/mpeg">
+				</audio>
+	  
+				<!-- All the  sounds for when the icon box is opened --> 
+				<audio id="fishAud">
+				  <source src="sounds/fish.wav" type="audio/wav">
+				  <source src="sounds/fish.mp3" type="audio/mpeg">
+				</audio>
+	  
+				<audio id="snakeAud">
+				  <source src="sounds/snake.wav" type="audio/wav">
+				  <source src="sounds/snake.mp3" type="audio/mpeg">
+				</audio>
+	  
+				<audio id="starAud">
+				  <source src="sounds/star.wav" type="audio/wav">
+				  <source src="sounds/star.mp3" type="audio/mpeg">
+				</audio>
+	  
+				<audio id="leekAud">
+				  <source src="sounds/leek.wav" type="audio/wav">
+				  <source src="sounds/leek.mp3" type="audio/mpeg">
+				</audio>
+	  
+				<audio id="moneyAud">
+				  <source src="sounds/money.wav" type="audio/wav">
+				  <source src="sounds/money.mp3" type="audio/mpeg">
+				</audio>
+	  
+				<audio id="easterAud">
+				  <source src="sounds/easter.wav" type="audio/wav">
+				  <source src="sounds/easter.mp3" type="audio/mpeg">
+				</audio>
+	  
+				<audio id="mexicanAud">
+				  <source src="sounds/mexican.wav" type="audio/wav">
+				  <source src="sounds/mexican.mp3" type="audio/mpeg">
+				</audio>
+	  
+				<audio id="sharkAud">
+				  <source src="sounds/shark.wav" type="audio/wav">
+				  <source src="sounds/shark.mp3" type="audio/mpeg">
+				</audio>
+	  
+				<audio id="buttonsAud">
+				  <source src="sounds/buttons.wav" type="audio/wav">
+				  <source src="sounds/buttons.mp3" type="audio/mpeg">
+				</audio>
+	  
+				<audio id="zebraAud">
+				  <source src="sounds/zebra.wav" type="audio/wav">
+				  <source src="sounds/zebra.wav" type="audio/mpeg">
+				</audio>
+	  
+				<audio id="aloeAud">
+				  <source src="sounds/aloe.wav" type="audio/wav">
+				  <source src="sounds/aloe.mp3" type="audio/mpeg">
+				</audio>
+	  
+				<audio id="pandaAud">
+				  <source src="sounds/panda.wav" type="audio/wav">
+				  <source src="sounds/panda.mp3" type="audio/mpeg">
+				</audio>
+	  
+				<audio id="helpAud">
+				  <source src="sounds/help.wav" type="audio/wav">
+				  <source src="sounds/help.mp3" type="audio/mpeg">
+				</audio>
+	  
+	  
+		  </div>
+		  </div>
+		  </div>
+		  </main>
+		  <script src="main.js"></script>
+		</body>
+	  </html>
+	  
