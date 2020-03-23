@@ -15,7 +15,7 @@
     } else {
       app_music.play();
       music_button.setAttribute('src', 'images/pause.png')
-      document.getElementById('music-text').innerHTML = 'Pause Music';
+      document.getElementById('appMusic').innerHTML = 'Pause Music';
       console.log('music playing');
     }
   }
@@ -43,34 +43,19 @@
     }
   }
 
-
-  // to get the buttons
-  var fishbone = document.getElementById('fishbone');
-  var snake = document.getElementById('snake');
-  var starfish = document.getElementById('starfish');
-  var leek = document.getElementById('leek');
-  var money = document.getElementById('money');
-  var easter = document.getElementById('easter');
-  var firecracker = document.getElementById('firecracker');
-  var shark = document.getElementById('shark');
-  var buttonstrings = document.getElementById('buttonstrings');
-  var zebra = document.getElementById('zebra');
-  var aloe = document.getElementById('aloe');
-  var panda = document.getElementById('panda');
-
   // making the icon buttons functional
-  fishbone.addEventListener('click', function() {displaysuccEntry('fish');});
-  snake.addEventListener('click', function() {displaysuccEntry('snakep');});
-  starfish.addEventListener('click', function() {displaysuccEntry('star');});
-  leek.addEventListener('click', function() {displaysuccEntry('hleek');});
-  money.addEventListener('click', function() {displaysuccEntry('moneyp');});
-  easter.addEventListener('click', function() {displaysuccEntry('easterc');});
-  firecracker.addEventListener('click', function() {displaysuccEntry('mexican');});
-  shark.addEventListener('click', function() {displaysuccEntry('sharks');});
-  buttonstrings.addEventListener('click', function() {displaysuccEntry('string');});
-  zebra.addEventListener('click', function() {displaysuccEntry('zebra');});
-  aloe.addEventListener('click', function() {displaysuccEntry('aloep');});
-  panda.addEventListener('click', function() {displaysuccEntry('pandap');});
+  document.getElementById('fish').addEventListener('click', function() {displayhelp('fishbone');});
+  document.getElementById('snakep').addEventListener('click', function() {displayhelp('snake');});
+  document.getElementById('star').addEventListener('click', function() {displayhelp('starfish');});
+  document.getElementById('hleek').addEventListener('click', function() {displayhelp('leek');});
+  document.getElementById('moneyp').addEventListener('click', function() {displayhelp('money');});
+  document.getElementById('easterc').addEventListener('click', function() {displayhelp('easter');});
+  document.getElementById('mexican').addEventListener('click', function() {displayhelp('firecracker');});
+  document.getElementById('sharks').addEventListener('click', function() {displayhelp('shark');});
+  document.getElementById('string').addEventListener('click', function() {displayhelp('buttonstrings');});
+  document.getElementById('zebra').addEventListener('click', function() {displayhelp('zebra');});
+  document.getElementById('aloep').addEventListener('click', function() {displayhelp('aloe');});
+  document.getElementById('pandap').addEventListener('click', function() {displayhelp('panda');});
 
   // Get areas where zodiac phrase will output
   var fishRead = document.getElementById('fishRead');
@@ -271,7 +256,7 @@ function displayhelp(succ) {
       if (name == "") {
         easterRead.textContent = "Easter Cactus, also known as the Spring Cactus. You are full of bloom, full of joy. Full of color bursting bright. After winter months, you speak of spring and good times coming, joys ahead. Positive vibes all around.";
       } else {
-        sanRead.textContent = phrase + "Easter Cactus, also known as the Spring Cactus. You are full of bloom, full of joy. Full of color bursting bright. After winter months, you speak of spring and good times coming, joys ahead. Positive vibes all around.";
+        easterRead.textContent = phrase + "Easter Cactus, also known as the Spring Cactus. You are full of bloom, full of joy. Full of color bursting bright. After winter months, you speak of spring and good times coming, joys ahead. Positive vibes all around.";
       }
 
       showZodiac(succ);
