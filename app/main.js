@@ -37,44 +37,8 @@
 
     // is date valid? //
     var date_test = document.getElementById('date').value;
-
-    var invalid_date;
-    if (date_test.includes('/')){
-
-      var date_test = date_test.split('/');
-
-      var month = date_test[0];
-      console.log('Month is ' + month);
-      var day = date_test[1];
-      console.log('Day is ' + day);
-
-      if (date_test[2] != undefined) {
-        var year = date_test[2];
-        console.log('Year is ' + year);
-
-        date_to_check = month + '/' + day;
-
-        if (year.length != 4 || date_to_check == '2/30' || date_to_check == '2/31' || date_to_check == '4/31' || date_to_check == '6/31' || date_to_check == '9/31' || date_to_check == '11/31') {
-          invalid_date = true;
-        } else {
-          invalid_date = false;
-        }
-      }
-    } else {
-      invalid_date = true;
-    }
-    ////////////////////////////////////////////////////////////////////////
-
-    if  (isNaN(date) || invalid_date) {
-      feedback.innerHTML = "Please enter a valid date in this format: /MM/DD/YYYY";
-      console.log('date error: invalid date entered');
-      date.focus();
-      date.value = '';
-      feedback.hidden = false;
-    } else {
-        feedback.hidden = true;
-        console.log('date is valid');
-        
+    
+    
         getSucc();
     }
   }
@@ -131,7 +95,7 @@ var phrase;
 
 function getSucc() {
 
-  const bday = document.getElementById('bday');
+  const bday = document.getElementById('date');
   const date = new Date(bday.value);
 
   const whichMonth = date.getUTCMonth() + 1;
@@ -165,49 +129,49 @@ function getSucc() {
   }
 
   console.log(succ);
-  displayPokedex(pokemon);
+  displayhelp(succ);
 
   return false;
 }
 
 // Random phrase generator that outputs if the person entered a name.
-function getPhrase(pokemonTemp) {
+function getPhrase(succphrases) {
   name = getName();
 
-  var pokemonFL = pokemonTemp.charAt(0).toUpperCase();
-  var pokemonT = pokemonFL + pokemonTemp.slice(1);
+  var succFL = succphrases.charAt(0).toUpperCase();
+  var succT = succFL + succphrases.slice(1);
   
   var phrases;
-  if (pokemonT == "Arcanine"){
+  if (succT == "Money Plant"){
     phrases = [
-      /* 0  */"Ah, " + name + ", looks like you are an " + pokemonT,
-      /* 1  */"Hmm, seems like you are an " + pokemonT + ", " + name,
-      /* 2  */"How interesting! " + name + ", it turns out you're an " + pokemonT,
-      /* 3  */"Not bad, " + name + "! You are an " + pokemonT,
-      /* 4  */"I'm not sure how you'll take this, " + name + ", but you're an " + pokemonT,
-      /* 5  */"Now " + name + ", you'd better sit down for this: you're an " + pokemonT,
-      /* 6  */"Well well well, if it isn't " + name + " masquerading as an " + pokemonT,
-      /* 7  */"The results are in " + name + ": You are most similar to an " + pokemonT,
-      /* 8  */name + ", I'm shocked! You are, in fact, an " + pokemonT,
-      /* 9  */"Guess what, " + name + "? You're an " + pokemonT,
-      /* 10 */"Yer an " + pokemonT + ", Harry!... I mean " + name,
-      /* 11 */"I wish I could be an " + pokemonT + " just like you, " + name
+      /* 0  */"Ooh!, " + name + ", looks like you are an " + succT,
+      /* 1  */"Cool!, you are an " + succT + ", " + name,
+      /* 2  */"Amazing! " + name + ", you're an " + succT,
+      /* 3  */"What's up, succa! You are an " + succT,
+      /* 4  */"This is way cool, " + name + ", you're an " + succT,
+      /* 5  */"Awesome sauce," + name + ", you're an " + succT,
+      /* 6  */"What do you know, " + name + " you are a " + succT,
+      /* 7  */"Look at this, " + name + "you are an" + succT,
+      /* 8  */name + ", This is pretty interesting, friend! You are an " + succT,
+      /* 9  */"Guess what, " + name + "? You're an " + succT,
+      /* 10 */"Yer an " + succT + ", Harry!... I mean " + name,
+      /* 11 */"I wish I could be an " + succT + " just like you, " + name
     ];
   }
   else {
     phrases = [
-      /* 0  */"Ah, " + name + ", looks like you are a " + pokemonT,
-      /* 1  */"Hmm, seems like you are a " + pokemonT + ", " + name,
-      /* 2  */"How interesting! " + name + ", it turns out you're a " + pokemonT,
-      /* 3  */"Not bad, " + name + "! You are a " + pokemonT,
-      /* 4  */"I'm not sure how you'll take this, " + name + ", but you're a " + pokemonT,
-      /* 5  */"Now " + name + ", you'd better sit down for this: you're a " + pokemonT,
-      /* 6  */"Well well well, if it isn't " + name + " masquerading as a " + pokemonT,
-      /* 7  */"The results are in " + name + ": You are most similar to a " + pokemonT,
-      /* 8  */name + ", I'm shocked! You are, in fact, a " + pokemonT,
-      /* 9  */"Guess what, " + name + "? You're a " + pokemonT,
-      /* 10 */"Yer a " + pokemonT + ", Harry!... I mean " + name,
-      /* 11 */"I wish I could be a " + pokemonT + " just like you, " + name
+      /* 0  */"Ah, " + name + ", looks like you are a " + succT,
+      /* 1  */"Hmm, seems like you are a " + succT + ", " + name,
+      /* 2  */"How interesting! " + name + ", it turns out you're a " + succT,
+      /* 3  */"Not bad, " + name + "! You are a " + succT,
+      /* 4  */"I'm not sure how you'll take this, " + name + ", but you're a " + succT,
+      /* 5  */"Now " + name + ", you'd better sit down for this: you're a " + succT,
+      /* 6  */"Well well well, if it isn't " + name + " coming in as a " + succT,
+      /* 7  */"The results are in " + name + ": You are most similar to a " + succT,
+      /* 8  */name + ", I'm shocked! You are, in fact, a " + succT,
+      /* 9  */"Guess what, " + name + "? You're a " + succT,
+      /* 10 */"Yer a " + succT + ", " + name,
+      /* 11 */"I wish I could be a " + succT + " just like you, " + name
     ];
   }
 
@@ -222,7 +186,7 @@ function getPhrase(pokemonTemp) {
 
 
 // Display the right result 
-function displayPokedex(succ) {
+function displayhelp(succ) {
 
   name = getName();
   phrase = getPhrase(succ);
@@ -440,12 +404,12 @@ function showForm() {
 
 // Retrieve first name
 function getName() {
-  var fnameT = document.getElementById('fName').value;
+  var fName = document.getElementById('firstName').value;
       if (fName == "") { console.log('No name retrieved.'); }
       else { console.log('Name was retrieved.'); }
 
-  var fletter = fNameT.charAt(0).toUpperCase();
-  var fname = fletter + fNameT.slice(1);
+  var fletter = fName.charAt(0).toUpperCase();
+  var fName = fletter + fName.slice(1);
   
   return fName;
 }
@@ -457,4 +421,3 @@ function playSound(succ) {
   cry.play();
 }
 
-}

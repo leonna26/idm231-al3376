@@ -13,8 +13,7 @@
 				<img class="music-button" id="music-button" src="images/playbutton.png" alt="Play Button">
 		</div>
 		<div class="help" id="help">
-				<button class="question TextBox" id="question" onclick="display('profoak')"> Help </button>
-
+				<button class="question TextBox" id="question" onclick="displayhelp('helpbutton')"> Help </button>
 		</div>
 	<header>
 		<h1>What up, succa?</h1>
@@ -27,7 +26,6 @@
 						<input id="date" type="date" placeholder="mm/dd/yyyy" name="date" required>
 						<input id="submit" type="submit" value="Submit" required>
 					</form>
-		<p class="feedback TextBox" id="feedback" hidden></p>
 
  <!-- zodiac result based on succulent match-->
 
@@ -424,7 +422,7 @@
 					  <form id="helpInfo">
 						
 						<p class="helpbutton">Type in your first name here:</p>
-						<input type="text" name="firstName" class="succTextBox" placeholder="First Name"><br>
+						<input type="text" id="firstName" class="succTextBox" placeholder="First Name"><br>
 						<p class="helpbutton">Put in your birthday, in the format MM/DD/YYYY</p>
 						<input type="text" name="birthday" class="succTextBox" placeholder="MM/DD/YYYY"><br>
 			
