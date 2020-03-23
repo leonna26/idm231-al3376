@@ -182,7 +182,7 @@ input[type="date"] {
 	margin: 0.5rem;
 }
 
-#pokeInfo, #helpInfo {
+#succeInfo, #helpInfo {
 	height: auto;
 	width: auto;
 	margin-top: 1rem;
@@ -308,6 +308,7 @@ input[type=text] {
 	src: url(fonts/Montserrat-Regular.ttf) format('ttf');
 	font-size: 1rem;
 	text-transform: none;	
+	display: none;
 	/* padding: 1.5rem; */
 	margin: 0.3125rem auto;
 	width: 98%;

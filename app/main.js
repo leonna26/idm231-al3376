@@ -10,7 +10,7 @@
     if (which_state === 'images/pause.png') {
       app_music.pause();
       music_button.setAttribute('src', 'images/playbutton.png')
-      document.getElementById('music-text').innerHTML = 'Play Music';
+      document.getElementById('appMusic').innerHTML = 'Play Music';
       console.log('music paused');
     } else {
       app_music.play();
@@ -382,7 +382,7 @@ function displayhelp(succ) {
 // Show the corresponding succulent match
 function showZodiac(succ) {
   document.getElementById(succ).setAttribute('class', 'succEntry showZodiac');
-  document.getElementById('inputForm').setAttribute('class', 'inputForm showZodiac');
+  document.getElementById('inputform').setAttribute('class', 'inputform showZodiac');
 }
 
 
@@ -398,7 +398,7 @@ function clearZodiac() {
 
 // Show form 
 function showForm() {
-  document.getElementById('inputForm').setAttribute('class', 'inputForm');
+  document.getElementById('inputform').setAttribute('class', 'inputform');
 }
 
 
