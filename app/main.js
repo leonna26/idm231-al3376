@@ -53,7 +53,7 @@
   document.getElementById('mexican').addEventListener('click', function() {displayhelp('firecracker');});
   document.getElementById('sharks').addEventListener('click', function() {displayhelp('shark');});
   document.getElementById('string').addEventListener('click', function() {displayhelp('buttonstrings');});
-  document.getElementById('zebra').addEventListener('click', function() {displayhelp('zebra');});
+  document.getElementById('zebrap').addEventListener('click', function() {displayhelp('zebra');});
   document.getElementById('aloep').addEventListener('click', function() {displayhelp('aloe');});
   document.getElementById('pandap').addEventListener('click', function() {displayhelp('panda');});
 
@@ -214,7 +214,7 @@ function displayhelp(succ) {
       if (name == "") {
         starRead.textContent = "Starfish Cactus - also known as carrion Flower, Star Flower, and Toad Cactus. You are special. Just as your flowers give off an unpleasant smell, others never know what you're up to. You are uniquely attractive - attracting flies and other insects, and it helps pollinate the blooms.";
       } else {
-        starRead.textContent = phrase + "Starfish Cactus - also known as carrion Flower, Star Flower, and Toad Cactus. You are special. Just as your flowers give off an unpleasant smell, others never know what you're up to. You are uniquely attractive - attracting flies and other insects, and it helps pollinate the blooms.";
+        starRead.textContent = phrase + "Starfish Cactus - also known as Carrion Flower, Star Flower, and Toad Cactus. You are special. Just as your flowers give off an unpleasant smell, others never know what you're up to. You are uniquely attractive - attracting flies and other insects, and it helps pollinate the blooms.";
       }
 
       showZodiac(succ);
@@ -352,9 +352,9 @@ function displayhelp(succ) {
       clearZodiac();
 
       if (name == "") {
-        helpInfo.textContent = "Hi! Not sure how to start? Here's some help!";
+        helpb.textContent = "Hi! Not sure how to start? Here's some help!";
       } else {
-        helpInfo.textContent = "Hi," + name + "not sure how to start? Here'some help!";
+        helpb.textContent = "Hi," + name + "not sure how to start? Here'some help!";
       }
 
       showZodiac(succ);
