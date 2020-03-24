@@ -3,6 +3,7 @@
   var app_music = document.getElementById('appMusic');
   var music_button = document.getElementById('music-button');
   music_button.addEventListener('click', function() {PlayPause()}, false);
+  document.getElementById('appMusic').volume = 0.1;
 
   function PlayPause() {  
     var which_state = music_button.getAttribute('src');
@@ -212,7 +213,7 @@ function displayhelp(succ) {
       clearZodiac();
 
       if (name == "") {
-        starRead.textContent = "Starfish Cactus - also known as carrion Flower, Star Flower, and Toad Cactus. You are special. Just as your flowers give off an unpleasant smell, others never know what you're up to. You are uniquely attractive - attracting flies and other insects, and it helps pollinate the blooms.";
+        starRead.textContent = "Starfish Cactus - also known as Carrion Flower, Star Flower, and Toad Cactus. You are special. Just as your flowers give off an unpleasant smell, others never know what you're up to. You are uniquely attractive - attracting flies and other insects, and it helps pollinate the blooms.";
       } else {
         starRead.textContent = phrase + "Starfish Cactus - also known as Carrion Flower, Star Flower, and Toad Cactus. You are special. Just as your flowers give off an unpleasant smell, others never know what you're up to. You are uniquely attractive - attracting flies and other insects, and it helps pollinate the blooms.";
       }
@@ -240,9 +241,9 @@ function displayhelp(succ) {
       clearZodiac();
 
       if (name == "") {
-        moneyRead.textContent = "Money Plant - also known as Jade Plant. You're often considered one of the 'old fashioned' of succulents, but don't let that bring you down. It is believed that the energy from this plant comes from its well-rooted energy that brings new growth. You are resilient, and able to thrive in even harsh environments." ;
+        moneyRead.textContent = "Money Plant - also known as Jade Plant. You're often considered one of the 'old fashioned' of succulents, but don't let that bring you down. You are resilient, and able to thrive in even harsh environments." ;
       } else {
-        moneyRead.textContent = phrase + "Money Plant - also known as Jade Plant. You're often considered one of the 'old fashioned' of succulents, but don't let that bring you down. It is believed that the energy from this plant comes from its well-rooted energy that brings new growth. You are resilient, and able to thrive in even harsh environments.";
+        moneyRead.textContent = phrase + "Money Plant - also known as Jade Plant. You're often considered one of the 'old fashioned' of succulents, but don't let that bring you down. You are resilient, and able to thrive in even harsh environments.";
       }
 
       showZodiac(succ);
@@ -298,7 +299,7 @@ function displayhelp(succ) {
       if (name == "") {
         buttonstringsRead.textContent = "String of Buttons - also known as Baby's Necklace, Necklace Vine, and Stacked Crassula. This fast growing plant has rosy edges, which contrasts with its gentle personality. Its colonizing qualities means it is aggressive and wants to spread its influence.";
       } else {
-        rapRead.textContent = phrase + "String of Buttons - also known as Baby's Necklace, Necklace Vine, and Stacked Crassula. This fast growing plant has rosy edges, which contrasts with its gentle personality. Its colonizing qualities means it is aggressive and wants to spread its influence.";
+        buttonstringsRead.textContent = phrase + "String of Buttons - also known as Baby's Necklace, Necklace Vine, and Stacked Crassula. This fast growing plant has rosy edges, which contrasts with its gentle personality. Its colonizing qualities means it is aggressive and wants to spread its influence.";
       }
 
       showZodiac(succ);
@@ -350,13 +351,6 @@ function displayhelp(succ) {
     case 'helpbutton':
       console.log('Ran helpbutton');
       clearZodiac();
-
-      if (name == "") {
-        helpb.textContent = "Hi! Not sure how to start? Here's some help!";
-      } else {
-        helpb.textContent = "Hi," + name + "not sure how to start? Here'some help!";
-      }
-
       showZodiac(succ);
       playSound('helpAud');
       break;

@@ -20,6 +20,24 @@ html {
 	font-family: Source-Sans-Pro;
 	src: url(fonts/SourceSansPro-Regular.ttf);
   }
+  
+.contentarea {
+	margin-top: 5rem;
+}
+
+.succbuttonsleft {
+margin-left: 5rem;
+display: flex;
+flex-direction: column;
+float: left;
+}
+
+.succbuttonsright {
+	margin-right: 5rem;
+	display: flex;
+	flex-direction: column;
+	float: right;
+	}
 
 .topbuttons {
 	width: 100%;
@@ -31,21 +49,22 @@ html {
 	position: fixed;
 	bottom: 0;
 	left: 0;
-	height: 6rem;
-	margin: 1rem 0 0 1rem;
+	height: 3rem;
+	background-color: #ad9ba5;
 }
 
 body {
 	background-color: #F7F3D9;
 }
 
-header {
+h1 {
 	font-family: 'Amatic SC', cursive;
 	src: url(fonts/AmaticSC-Bold.ttf) format('ttf');
 	text-align: center;
-	font-size: 28px;
+	font-size: 46px;
 	color: rgb(58, 58, 58);
 	padding-bottom: 24px;
+	margin-top: 6rem;
 }
 
 .description {
@@ -59,13 +78,6 @@ header {
 
 #bday {
 	margin: 1.25rem auto;
-}
-
-.succBox {
-	width: 300px;
-	height: 45px;
-	font-size: 15px;
-	border-radius: 5px;
 }
 
 
@@ -82,12 +94,8 @@ section {
 }
 
 img {
-	width: 100px;
-	height: 100px;
-}
-h3 {
-	width: 800px;
-	text-align: center;
+	width: 150px;
+	height: 150px;
 }
 
 button {
@@ -95,8 +103,9 @@ button {
 	src: url(fonts/Montserrat-Regular.ttf) format('ttf');
 	text-align: center;
 	background-color: #a76b89;
-	width: 100px;
+	width: 35px;
 	color: white;
+	margin-left: 15rem;
 }
 
 body .buttons {
@@ -158,6 +167,7 @@ input[type="date"] {
 	font-family: 'Source-Sans-Pro';
 	src: url(./fonts/SourceSansPro-Regular.ttf) format('ttf');
 	margin: 1rem 1rem 0 0;
+	margin-top: 4.5rem;
 	padding: 0.3rem 0.5rem;
 	width: 100%;
 	font-size: 1rem;
@@ -167,18 +177,23 @@ input[type="date"] {
 
 .succTextBox {
 	background: white;
+	margin-top: 5rem;
 }
 
 .succBox {
 	border-radius: 0.125rem;
 	padding: 0.5rem;
-	width: 100%;
-	height: auto;
-	line-height: 1.5rem;
 	margin: 0 auto;
 	margin-bottom: 1.25rem;
 	text-align: left;
 	cursor: default;
+	width: 85%;
+	height: 65px;
+	font-size: 15px;
+	border-radius: 5px;
+	font-size: 0.875rem;
+	line-height: 1.5rem;
+	margin: 1rem 1.5rem 1.5rem 1.5rem;
 }
 
 .feedback {
@@ -245,16 +260,6 @@ input[type=text] {
 
 
 /* Buttons at the bottom of the page */
-.buttons {
-  margin: 1rem auto;
-  overflow: auto;
-}
-
-.succbuttons {
-  float: left;
-  width: 100%;
-}
-
 .succicon {
   float: left;
 }
@@ -262,50 +267,6 @@ input[type=text] {
 .succicon:hover {
 	cursor: pointer;
 	animation: jump 1000ms linear both;
-}
-
-@keyframes jump {
-	0.00% { transform: matrix3d(1, 0, 0, 0, 0, 1, 0, 0, 0, 0, 1, 0, 0, 0, 0, 1); }
-	3.33% { transform: matrix3d(1.074, 0, 0, 0, 0, 1.074, 0, 0, 0, 0, 1, 0, 0, 0, 0, 1); }
-	6.67% { transform: matrix3d(1.088, 0, 0, 0, 0, 1.088, 0, 0, 0, 0, 1, 0, 0, 0, 0, 1); }
-	10.00% { transform: matrix3d(1.076, 0, 0, 0, 0, 1.076, 0, 0, 0, 0, 1, 0, 0, 0, 0, 1); }
-	13.33% { transform: matrix3d(1.055, 0, 0, 0, 0, 1.055, 0, 0, 0, 0, 1, 0, 0, 0, 0, 1); }
-	16.67% { transform: matrix3d(1.033, 0, 0, 0, 0, 1.033, 0, 0, 0, 0, 1, 0, 0, 0, 0, 1); }
-	20.00% { transform: matrix3d(1.015, 0, 0, 0, 0, 1.015, 0, 0, 0, 0, 1, 0, 0, 0, 0, 1); }
-	23.33% { transform: matrix3d(1.004, 0, 0, 0, 0, 1.004, 0, 0, 0, 0, 1, 0, 0, 0, 0, 1); }
-	26.67% { transform: matrix3d(0.998, 0, 0, 0, 0, 0.998, 0, 0, 0, 0, 1, 0, 0, 0, 0, 1); }
-	30.00% { transform: matrix3d(0.995, 0, 0, 0, 0, 0.995, 0, 0, 0, 0, 1, 0, 0, 0, 0, 1); }
-	33.33% { transform: matrix3d(0.995, 0, 0, 0, 0, 0.995, 0, 0, 0, 0, 1, 0, 0, 0, 0, 1); }
-	36.67% { transform: matrix3d(0.997, 0, 0, 0, 0, 0.997, 0, 0, 0, 0, 1, 0, 0, 0, 0, 1); }
-	40.00% { transform: matrix3d(0.998, 0, 0, 0, 0, 0.998, 0, 0, 0, 0, 1, 0, 0, 0, 0, 1); }
-	43.33% { transform: matrix3d(0.999, 0, 0, 0, 0, 0.999, 0, 0, 0, 0, 1, 0, 0, 0, 0, 1); }
-	46.67% { transform: matrix3d(1, 0, 0, 0, 0, 1, 0, 0, 0, 0, 1, 0, 0, 0, 0, 1); }
-	50.00% { transform: matrix3d(1, 0, 0, 0, 0, 1, 0, 0, 0, 0, 1, 0, 0, 0, 0, 1); }
-	53.33% { transform: matrix3d(1, 0, 0, 0, 0, 1, 0, 0, 0, 0, 1, 0, 0, 0, 0, 1); }
-	56.67% { transform: matrix3d(1, 0, 0, 0, 0, 1, 0, 0, 0, 0, 1, 0, 0, 0, 0, 1); }
-	60.00% { transform: matrix3d(1, 0, 0, 0, 0, 1, 0, 0, 0, 0, 1, 0, 0, 0, 0, 1); }
-	63.33% { transform: matrix3d(1, 0, 0, 0, 0, 1, 0, 0, 0, 0, 1, 0, 0, 0, 0, 1); }
-	66.67% { transform: matrix3d(1, 0, 0, 0, 0, 1, 0, 0, 0, 0, 1, 0, 0, 0, 0, 1); }
-	70.00% { transform: matrix3d(1, 0, 0, 0, 0, 1, 0, 0, 0, 0, 1, 0, 0, 0, 0, 1); }
-	73.33% { transform: matrix3d(1, 0, 0, 0, 0, 1, 0, 0, 0, 0, 1, 0, 0, 0, 0, 1); }
-	76.67% { transform: matrix3d(1, 0, 0, 0, 0, 1, 0, 0, 0, 0, 1, 0, 0, 0, 0, 1); }
-	80.00% { transform: matrix3d(1, 0, 0, 0, 0, 1, 0, 0, 0, 0, 1, 0, 0, 0, 0, 1); }
-	83.33% { transform: matrix3d(1, 0, 0, 0, 0, 1, 0, 0, 0, 0, 1, 0, 0, 0, 0, 1); }
-	86.67% { transform: matrix3d(1, 0, 0, 0, 0, 1, 0, 0, 0, 0, 1, 0, 0, 0, 0, 1); }
-	90.00% { transform: matrix3d(1, 0, 0, 0, 0, 1, 0, 0, 0, 0, 1, 0, 0, 0, 0, 1); }
-	93.33% { transform: matrix3d(1, 0, 0, 0, 0, 1, 0, 0, 0, 0, 1, 0, 0, 0, 0, 1); }
-	96.67% { transform: matrix3d(1, 0, 0, 0, 0, 1, 0, 0, 0, 0, 1, 0, 0, 0, 0, 1); }
-	100.00% { transform: matrix3d(1, 0, 0, 0, 0, 1, 0, 0, 0, 0, 1, 0, 0, 0, 0, 1); }
-}
-
-
-/* Styling for the zodiac reading */
-
-.row::after {
-    content: "";
-    clear: both;
-    display: table;
-    overflow: auto;
 }
 
 [class*="col-"] {
@@ -325,13 +286,14 @@ input[type=text] {
 	text-transform: none;	
 	display: none;
 	/* padding: 1.5rem; */
-	margin: 0.3125rem auto;
-	width: 98%;
-	max-width: 25rem /*375px*/;
+	margin: 0.5rem auto;
+	width: 100%;
+	max-width: 25rem;
 	background-color: rgba(255,255,255,1.00);
 	box-shadow:  inset 4px 4px 0px rgb(153, 173, 130), inset -4px -4px 0px rgb(153, 173, 130);
 	border-radius: 3px;
 	overflow: auto;
+	height: 26rem;
 }
 
 .succEntry.showZodiac { 
@@ -346,125 +308,20 @@ input[type=text] {
 	animation: closeSucc 2000ms linear both;
 }
 
-@keyframes opensucc {
-	0.00% { transform: matrix3d(1, 0, 0, 0, 0, 0, 0, 0, 0, 0, 1, 0, 0, 0, 0, 1); }
-	1.67% { transform: matrix3d(1, 0, 0, 0, 0, 0.186, 0, 0, 0, 0, 1, 0, 0, 0, 0, 1); }
-	3.33% { transform: matrix3d(1, 0, 0, 0, 0, 0.345, 0, 0, 0, 0, 1, 0, 0, 0, 0, 1); }
-	5.00% { transform: matrix3d(1, 0, 0, 0, 0, 0.483, 0, 0, 0, 0, 1, 0, 0, 0, 0, 1); }
-	6.67% { transform: matrix3d(1, 0, 0, 0, 0, 0.593, 0, 0, 0, 0, 1, 0, 0, 0, 0, 1); }
-	8.33% { transform: matrix3d(1, 0, 0, 0, 0, 0.684, 0, 0, 0, 0, 1, 0, 0, 0, 0, 1); }
-	10.00% { transform: matrix3d(1, 0, 0, 0, 0, 0.761, 0, 0, 0, 0, 1, 0, 0, 0, 0, 1); }
-	11.67% { transform: matrix3d(1, 0, 0, 0, 0, 0.82, 0, 0, 0, 0, 1, 0, 0, 0, 0, 1); }
-	13.33% { transform: matrix3d(1, 0, 0, 0, 0, 0.867, 0, 0, 0, 0, 1, 0, 0, 0, 0, 1); }
-	15.00% { transform: matrix3d(1, 0, 0, 0, 0, 0.905, 0, 0, 0, 0, 1, 0, 0, 0, 0, 1); }
-	16.67% { transform: matrix3d(1, 0, 0, 0, 0, 0.934, 0, 0, 0, 0, 1, 0, 0, 0, 0, 1); }
-	18.33% { transform: matrix3d(1, 0, 0, 0, 0, 0.956, 0, 0, 0, 0, 1, 0, 0, 0, 0, 1); }
-	20.00% { transform: matrix3d(1, 0, 0, 0, 0, 0.973, 0, 0, 0, 0, 1, 0, 0, 0, 0, 1); }
-	21.67% { transform: matrix3d(1, 0, 0, 0, 0, 0.985, 0, 0, 0, 0, 1, 0, 0, 0, 0, 1); }
-	23.33% { transform: matrix3d(1, 0, 0, 0, 0, 0.994, 0, 0, 0, 0, 1, 0, 0, 0, 0, 1); }
-	25.00% { transform: matrix3d(1, 0, 0, 0, 0, 1, 0, 0, 0, 0, 1, 0, 0, 0, 0, 1); }
-	26.67% { transform: matrix3d(1, 0, 0, 0, 0, 0.996, 0, 0, 0, 0, 1, 0, 0, 0, 0, 1); }
-	28.33% { transform: matrix3d(1, 0, 0, 0, 0, 0.993, 0, 0, 0, 0, 1, 0, 0, 0, 0, 1); }
-	30.00% { transform: matrix3d(1, 0, 0, 0, 0, 0.992, 0, 0, 0, 0, 1, 0, 0, 0, 0, 1); }
-	31.67% { transform: matrix3d(1, 0, 0, 0, 0, 0.991, 0, 0, 0, 0, 1, 0, 0, 0, 0, 1); }
-	33.33% { transform: matrix3d(1, 0, 0, 0, 0, 0.991, 0, 0, 0, 0, 1, 0, 0, 0, 0, 1); }
-	35.00% { transform: matrix3d(1, 0, 0, 0, 0, 0.992, 0, 0, 0, 0, 1, 0, 0, 0, 0, 1); }
-	36.67% { transform: matrix3d(1, 0, 0, 0, 0, 0.992, 0, 0, 0, 0, 1, 0, 0, 0, 0, 1); }
-	38.33% { transform: matrix3d(1, 0, 0, 0, 0, 0.993, 0, 0, 0, 0, 1, 0, 0, 0, 0, 1); }
-	40.00% { transform: matrix3d(1, 0, 0, 0, 0, 0.994, 0, 0, 0, 0, 1, 0, 0, 0, 0, 1); }
-	41.67% { transform: matrix3d(1, 0, 0, 0, 0, 0.995, 0, 0, 0, 0, 1, 0, 0, 0, 0, 1); }
-	43.33% { transform: matrix3d(1, 0, 0, 0, 0, 0.995, 0, 0, 0, 0, 1, 0, 0, 0, 0, 1); }
-	45.00% { transform: matrix3d(1, 0, 0, 0, 0, 0.996, 0, 0, 0, 0, 1, 0, 0, 0, 0, 1); }
-	46.67% { transform: matrix3d(1, 0, 0, 0, 0, 0.997, 0, 0, 0, 0, 1, 0, 0, 0, 0, 1); }
-	48.33% { transform: matrix3d(1, 0, 0, 0, 0, 0.997, 0, 0, 0, 0, 1, 0, 0, 0, 0, 1); }
-	50.00% { transform: matrix3d(1, 0, 0, 0, 0, 0.998, 0, 0, 0, 0, 1, 0, 0, 0, 0, 1); }
-	51.67% { transform: matrix3d(1, 0, 0, 0, 0, 0.998, 0, 0, 0, 0, 1, 0, 0, 0, 0, 1); }
-	53.33% { transform: matrix3d(1, 0, 0, 0, 0, 0.999, 0, 0, 0, 0, 1, 0, 0, 0, 0, 1); }
-	55.00% { transform: matrix3d(1, 0, 0, 0, 0, 0.999, 0, 0, 0, 0, 1, 0, 0, 0, 0, 1); }
-	56.67% { transform: matrix3d(1, 0, 0, 0, 0, 0.999, 0, 0, 0, 0, 1, 0, 0, 0, 0, 1); }
-	58.33% { transform: matrix3d(1, 0, 0, 0, 0, 0.999, 0, 0, 0, 0, 1, 0, 0, 0, 0, 1); }
-	60.00% { transform: matrix3d(1, 0, 0, 0, 0, 0.999, 0, 0, 0, 0, 1, 0, 0, 0, 0, 1); }
-	61.67% { transform: matrix3d(1, 0, 0, 0, 0, 1, 0, 0, 0, 0, 1, 0, 0, 0, 0, 1); }
-	63.33% { transform: matrix3d(1, 0, 0, 0, 0, 1, 0, 0, 0, 0, 1, 0, 0, 0, 0, 1); }
-	65.00% { transform: matrix3d(1, 0, 0, 0, 0, 1, 0, 0, 0, 0, 1, 0, 0, 0, 0, 1); }
-	66.67% { transform: matrix3d(1, 0, 0, 0, 0, 1, 0, 0, 0, 0, 1, 0, 0, 0, 0, 1); }
-	68.33% { transform: matrix3d(1, 0, 0, 0, 0, 1, 0, 0, 0, 0, 1, 0, 0, 0, 0, 1); }
-	70.00% { transform: matrix3d(1, 0, 0, 0, 0, 1, 0, 0, 0, 0, 1, 0, 0, 0, 0, 1); }
-	71.67% { transform: matrix3d(1, 0, 0, 0, 0, 1, 0, 0, 0, 0, 1, 0, 0, 0, 0, 1); }
-	73.33% { transform: matrix3d(1, 0, 0, 0, 0, 1, 0, 0, 0, 0, 1, 0, 0, 0, 0, 1); }
-	75.00% { transform: matrix3d(1, 0, 0, 0, 0, 1, 0, 0, 0, 0, 1, 0, 0, 0, 0, 1); }
-	76.67% { transform: matrix3d(1, 0, 0, 0, 0, 1, 0, 0, 0, 0, 1, 0, 0, 0, 0, 1); }
-	78.33% { transform: matrix3d(1, 0, 0, 0, 0, 1, 0, 0, 0, 0, 1, 0, 0, 0, 0, 1); }
-	80.00% { transform: matrix3d(1, 0, 0, 0, 0, 1, 0, 0, 0, 0, 1, 0, 0, 0, 0, 1); }
-	81.67% { transform: matrix3d(1, 0, 0, 0, 0, 1, 0, 0, 0, 0, 1, 0, 0, 0, 0, 1); }
-	83.33% { transform: matrix3d(1, 0, 0, 0, 0, 1, 0, 0, 0, 0, 1, 0, 0, 0, 0, 1); }
-	85.00% { transform: matrix3d(1, 0, 0, 0, 0, 1, 0, 0, 0, 0, 1, 0, 0, 0, 0, 1); }
-	86.67% { transform: matrix3d(1, 0, 0, 0, 0, 1, 0, 0, 0, 0, 1, 0, 0, 0, 0, 1); }
-	88.33% { transform: matrix3d(1, 0, 0, 0, 0, 1, 0, 0, 0, 0, 1, 0, 0, 0, 0, 1); }
-	90.00% { transform: matrix3d(1, 0, 0, 0, 0, 1, 0, 0, 0, 0, 1, 0, 0, 0, 0, 1); }
-	91.67% { transform: matrix3d(1, 0, 0, 0, 0, 1, 0, 0, 0, 0, 1, 0, 0, 0, 0, 1); }
-	93.33% { transform: matrix3d(1, 0, 0, 0, 0, 1, 0, 0, 0, 0, 1, 0, 0, 0, 0, 1); }
-	95.00% { transform: matrix3d(1, 0, 0, 0, 0, 1, 0, 0, 0, 0, 1, 0, 0, 0, 0, 1); }
-	96.67% { transform: matrix3d(1, 0, 0, 0, 0, 1, 0, 0, 0, 0, 1, 0, 0, 0, 0, 1); }
-	98.33% { transform: matrix3d(1, 0, 0, 0, 0, 1, 0, 0, 0, 0, 1, 0, 0, 0, 0, 1); }
-	100.00% { transform: matrix3d(1, 0, 0, 0, 0, 1, 0, 0, 0, 0, 1, 0, 0, 0, 0, 1); }
-}
-
-@keyframes closesucc {
-	0.00% { transform: matrix3d(1, 0, 0, 0, 0, 1, 0, 0, 0, 0, 1, 0, 0, 0, 0, 1); }
-	3.33% { transform: matrix3d(1, 0, 0, 0, 0, 0.613, 0, 0, 0, 0, 1, 0, 0, 0, 0, 1); }
-	6.67% { transform: matrix3d(1, 0, 0, 0, 0, 0.337, 0, 0, 0, 0, 1, 0, 0, 0, 0, 1); }
-	10.00% { transform: matrix3d(1, 0, 0, 0, 0, 0.155, 0, 0, 0, 0, 1, 0, 0, 0, 0, 1); }
-	13.33% { transform: matrix3d(1, 0, 0, 0, 0, 0.053, 0, 0, 0, 0, 1, 0, 0, 0, 0, 1); }
-	16.67% { transform: matrix3d(1, 0, 0, 0, 0, 0.001, 0, 0, 0, 0, 1, 0, 0, 0, 0, 1); }
-	20.00% { transform: matrix3d(1, 0, 0, 0, 0, 0.021, 0, 0, 0, 0, 1, 0, 0, 0, 0, 1); }
-	23.33% { transform: matrix3d(1, 0, 0, 0, 0, 0.026, 0, 0, 0, 0, 1, 0, 0, 0, 0, 1); }
-	26.67% { transform: matrix3d(1, 0, 0, 0, 0, 0.023, 0, 0, 0, 0, 1, 0, 0, 0, 0, 1); }
-	30.00% { transform: matrix3d(1, 0, 0, 0, 0, 0.017, 0, 0, 0, 0, 1, 0, 0, 0, 0, 1); }
-	33.33% { transform: matrix3d(1, 0, 0, 0, 0, 0.012, 0, 0, 0, 0, 1, 0, 0, 0, 0, 1); }
-	36.67% { transform: matrix3d(1, 0, 0, 0, 0, 0.007, 0, 0, 0, 0, 1, 0, 0, 0, 0, 1); }
-	40.00% { transform: matrix3d(1, 0, 0, 0, 0, 0.004, 0, 0, 0, 0, 1, 0, 0, 0, 0, 1); }
-	43.33% { transform: matrix3d(1, 0, 0, 0, 0, 0.002, 0, 0, 0, 0, 1, 0, 0, 0, 0, 1); }
-	46.67% { transform: matrix3d(1, 0, 0, 0, 0, 0.001, 0, 0, 0, 0, 1, 0, 0, 0, 0, 1); }
-	50.00% { transform: matrix3d(1, 0, 0, 0, 0, 0, 0, 0, 0, 0, 1, 0, 0, 0, 0, 1); }
-	53.33% { transform: matrix3d(1, 0, 0, 0, 0, 0, 0, 0, 0, 0, 1, 0, 0, 0, 0, 1); }
-	56.67% { transform: matrix3d(1, 0, 0, 0, 0, 0, 0, 0, 0, 0, 1, 0, 0, 0, 0, 1); }
-	60.00% { transform: matrix3d(1, 0, 0, 0, 0, 0, 0, 0, 0, 0, 1, 0, 0, 0, 0, 1); }
-	63.33% { transform: matrix3d(1, 0, 0, 0, 0, 0, 0, 0, 0, 0, 1, 0, 0, 0, 0, 1); }
-	66.67% { transform: matrix3d(1, 0, 0, 0, 0, 0, 0, 0, 0, 0, 1, 0, 0, 0, 0, 1); }
-	70.00% { transform: matrix3d(1, 0, 0, 0, 0, 0, 0, 0, 0, 0, 1, 0, 0, 0, 0, 1); }
-	73.33% { transform: matrix3d(1, 0, 0, 0, 0, 0, 0, 0, 0, 0, 1, 0, 0, 0, 0, 1); }
-	76.67% { transform: matrix3d(1, 0, 0, 0, 0, 0, 0, 0, 0, 0, 1, 0, 0, 0, 0, 1); }
-	80.00% { transform: matrix3d(1, 0, 0, 0, 0, 0, 0, 0, 0, 0, 1, 0, 0, 0, 0, 1); }
-	83.33% { transform: matrix3d(1, 0, 0, 0, 0, 0, 0, 0, 0, 0, 1, 0, 0, 0, 0, 1); }
-	86.67% { transform: matrix3d(1, 0, 0, 0, 0, 0, 0, 0, 0, 0, 1, 0, 0, 0, 0, 1); }
-	90.00% { transform: matrix3d(1, 0, 0, 0, 0, 0, 0, 0, 0, 0, 1, 0, 0, 0, 0, 1); }
-	93.33% { transform: matrix3d(1, 0, 0, 0, 0, 0, 0, 0, 0, 0, 1, 0, 0, 0, 0, 1); }
-	96.67% { transform: matrix3d(1, 0, 0, 0, 0, 0, 0, 0, 0, 0, 1, 0, 0, 0, 0, 1); }
-	100.00% { transform: matrix3d(1, 0, 0, 0, 0, 0, 0, 0, 0, 0, 1, 0, 0, 0, 0, 1); }
-}
-
 .succPic {
 	text-align: center;
+	height: 150px;
+	width: 150px;
 }
 
 .succPic > p {
 	margin: 0;
 }
 
-.succPic, .succDesc {
-	margin-top: 1.5rem;
-}
 
 .succDesc {
 	margin: 1.5rem auto 0 auto;
 	line-height: 1.75rem;
-}
-
-.succBox {
-	font-size: 0.875rem;
-	line-height: 1.5rem;
-	margin: 1rem 1.5rem 1.5rem 1.5rem;
 }
 
 .helpbutton {
@@ -485,6 +342,7 @@ input[type=text] {
 	padding: 0.5rem;
 	width: auto;
 	margin: 1rem 0 1.5rem 1.5rem;
+	margin-top: 5rem;
 }
 
 
@@ -542,21 +400,7 @@ input[type=text] {
 
 }
 
-@media screen and (min-width: 37.5rem /*600px*/) {
-	.buttons {
-		width: 37.5rem;
-	}
-
-	.succBox {
-		max-width: 45rem;
-	}
-}
-
 @media screen and (min-width: 45.0625rem /*721px*/) {
-	.succBox {
-		width: 45rem;
-	}
-
 	.inputForm {
 		margin: 0 auto;
 	}

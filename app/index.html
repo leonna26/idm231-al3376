@@ -11,19 +11,19 @@
 <body>
 		<div class="topbuttons" id="topbuttons">
 				<img class="music-button" id="music-button" src="images/playbutton.png" alt="Play Button">
-				<img class="question TextBox" id="question" src="images/help.png" alt="Help Button" onclick="displayhelp('helpbutton')"> </img>
+				<img class="question TextBox" id="question" src="images/help.png" alt="Help Button" onclick="displayhelp('helpbutton')"> 
 		</div>
-	<header>
-		<h1>What up, succa?</h1>
-		<p class="description"> Input your name and birthday to discover your succulent type!</p>
-	</header>
 	<main>
-		<div class="form" id="form">
-			<form action="index.html" method="post" name="form" id="inputform" autocomplete="on">
+			<div class="contentarea" id="contentarea"></div>
+				<h1>What up, succa?</h1>
+				<p class="description"> Input your name and birthday to discover your succulent type!</p>
+				<div class="form" id="form">
+				<form action="index.html" method="post" name="form" id="inputform" autocomplete="on">
 				<input type="text" placeholder="First name" name="fName" id="firstName" required>
 				<input id="date" type="date" placeholder="mm/dd/yyyy" name="date" required>
 				<input id="submit" type="submit" value="Submit" required>
-			</form>
+				</form>
+		</div>
 
  <!-- zodiac result based on succulent match-->
         <!-- Fishbone Orchid (Aries) -->
@@ -41,7 +41,7 @@
 				  <div class="col-4">
 					<p class="succBox" id="fishRead"></p>
 				  
-					<button class="closeSuccTextBox" onclick="clearZodiac(), showForm()">Close</button>
+					<button class="closeSuccTextBox" onclick="clearZodiac(), showForm()">X</button>
 				  </div> 
 				</div>
 	  
@@ -64,7 +64,7 @@
 					  <div class="col-4">
 						<p class="succBox" id="snakeRead"></p>
 					  
-						<button class="closeSucc TextBox" onclick="clearZodiac(), showForm()">Close</button>
+						<button class="closeSucc TextBox" onclick="clearZodiac(), showForm()">X</button>
 					  </div> 
 					</div>
 		
@@ -85,7 +85,7 @@
 					  <div class="col-4">
 						<p class="succBox" id="starRead"></p>
 					  
-						<button class="closeSuccTextBox" onclick="clearZodiac(), showForm()">Close</button>
+						<button class="closeSuccTextBox" onclick="clearZodiac(), showForm()">X</button>
 					  </div> 
 					</div>
 		
@@ -108,7 +108,7 @@
 					  <div class="col-4">
 						<p class="succBox" id="leekRead"></p>
 					  
-						<button class="closeSuccTextBox" onclick="clearZodiac(), showForm()">Close</button>
+						<button class="closeSuccTextBox" onclick="clearZodiac(), showForm()">X</button>
 					  </div> 
 					</div>
 		
@@ -131,7 +131,7 @@
 					  <div class="col-4">
 						<p class="succBox" id="moneyRead"></p>
 					  
-						<button class="closeSuccTextBox" onclick="clearZodiac(), showForm()">Close</button>
+						<button class="closeSuccTextBox" onclick="clearZodiac(), showForm()">X</button>
 					  </div> 
 					</div>
 		
@@ -154,12 +154,12 @@
 					  <div class="col-4">
 						<p class="succBox" id="easterRead"></p>
 					  
-						<button class="closesuccTextBox" onclick="clearZodiac(), showForm()">Close</button>
+						<button class="closesuccTextBox" onclick="clearZodiac(), showForm()">X</button>
 					  </div> 
 					</div>
 		
 				  </div>
-	  
+				</div>
 			  <!-- Mexican Firecracker (Libra) -->
 			  <div class="succEntry" id="firecracker">
 				  <div class="row">
@@ -177,7 +177,7 @@
 					  <div class="col-4">
 						<p class="succBox" id="firecrackerRead"></p>
 					  
-						<button class="closesuccTextBox" onclick="clearZodiac(), showForm()">Close</button>
+						<button class="closesuccTextBox" onclick="clearZodiac(), showForm()">X</button>
 					  </div> 
 					</div>
 		
@@ -200,7 +200,7 @@
 					  <div class="col-4">
 						<p class="succBox" id="sharkRead"></p>
 					  
-						<button class="closesuccTextBox" onclick="clearZodiac(), showForm()">Close</button>
+						<button class="closesuccTextBox" onclick="clearZodiac(), showForm()">X</button>
 					  </div> 
 					</div>
 		
@@ -223,7 +223,7 @@
 					  <div class="col-4">
 						<p class="succBox" id="buttonstringsRead"></p>
 					  
-						<button class="closesuccTextBox" onclick="clearZodiac(), showForm()">Close</button>
+						<button class="closesuccTextBox" onclick="clearZodiac(), showForm()">X</button>
 					  </div> 
 					</div>
 		
@@ -246,7 +246,7 @@
 					  <div class="col-4">
 						<p class="succBox" id="zebraRead"></p>
 					  
-						<button class="closesuccTextBox" onclick="clearZodiac(), showForm()">Close</button>
+						<button class="closesuccTextBox" onclick="clearZodiac(), showForm()">X</button>
 					  </div> 
 					</div>
 		
@@ -270,7 +270,7 @@
 					  <div class="col-4">
 						<p class="succBox" id="aloeRead"></p>
 					  
-						<button class="closesuccTextBox" onclick="clearZodiac(), showForm()">Close</button>
+						<button class="closesuccTextBox" onclick="clearZodiac(), showForm()">X</button>
 					  </div> 
 					</div>
 		
@@ -294,7 +294,7 @@
 					  <div class="col-4">
 						<p class="succBox" id="pandaRead"></p>
 					  
-						<button class="closesuccTextBox" onclick="clearZodiac(), showForm()">Close</button>
+						<button class="closesuccTextBox" onclick="clearZodiac(), showForm()">X</button>
 					  </div>
 					</div>
 		
@@ -305,33 +305,21 @@
 			  <div class="succEntry" id="helpbutton">
 				<div class="row">
 				  <div class="col-2">
-					<div class="succPic">
-					</div>
 				  </div>
-					<div class="succDesc">
-					 Need help?
 					</div>
-				</div>	  
-				<div class="row">
-				  <div class="col-4">
 					<p class="helpbutton" id="helpb"></p>
-	  
 					<div class="inputForm">
 					  <form id="helpInfo">
-						
-						<p>Type in your first name and enter in your birthday in the form above. Then click the "submit" button to discover your succulent type! All set? Close this box and enter your info in the form to get started!</p>
+						<p>Not sure how to start? Type in your first name and enter in your birthday in the form above. Then click the "submit" button to discover your succulent type! All set? Close this box and enter your info in the form to get started!</p>
 					  </form>
 					</div>
-					<button class="closesuccTextBox" onclick="clearZodiac(), showForm()">Close</button>
+					<button class="closesuccTextBox" onclick="clearZodiac(), showForm()">X</button>
 				  </div> 
-				</div>
 	  
-			  </div>
 	  
 			  <!--  Buttons at bottom of page --> 
 			  <div class="buttons">
-	  
-				<div class="succbuttons">
+				<div class="succbuttonsleft" id="succbuttonsleft">
 				  <a href="#succBox"><img src="images/fishboneorchid-01.png" alt="Fishbone Orchid" class="succicon" id="fish"></a>
 				  <a href="#succBox"><img src="images/snakeplant-01.png" alt="Snake Plant" class="succicon" id="snakep"></a>
 				  <a href="#succBox"><img src="images/starfishcactus-01.png" alt="Starfish Cactus" class="succicon" id="star"></a>
@@ -339,8 +327,7 @@
 				  <a href="#succBox"><img src="images/moneyplant-01.png" alt="Money Plant" class="succicon" id="moneyp"></a>
 				  <a href="#succBox"><img src="images/eastercactus.png" alt="Easter Cactus" class="succicon" id="easterc"></a>
 				</div>
-				
-				<div class="succbuttons">
+				<div class="succbuttonsright">
 				  <a href="#succBox"><img src="images/mexicanfirecracker-01.png" alt="Mexican Firecracker" class="succicon" id="mexican"></a>
 				  <a href="#succBox"><img src="images/sharkstooth-01.png" alt="Shark's Tooth" class="succicon" id="sharks"></a>
 				  <a href="#succBox"><img src="images/buttonstrings-01.png" alt="String of Buttons" class="succicon"  id="string"></a>
@@ -348,6 +335,7 @@
 				  <a href="#succBox"><img src="images/aloe-01.png" alt="Aloe Plant" class="succicon" id="aloep"></a>
 				  <a href="#succBox"><img src="images/panda-01.png" alt="Panda Plant" class="succicon" id="pandap"></a>
 				</div>
+			</div>
 	  
 				<!-- Audio that plays in the background -->
 				<audio id="appMusic">
@@ -420,11 +408,7 @@
 				  <source src="sounds/help.wav" type="audio/wav">
 				  <source src="sounds/help.mp3" type="audio/mpeg">
 				</audio>
-	  
-	  
-		  </div>
-		  </div>
-		  </main>
+		</main>
 		  <script src="main.js"></script>
 		</body>
 	  </html>
