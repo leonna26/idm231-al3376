@@ -11,405 +11,356 @@
 <body>
 		<div class="topbuttons" id="topbuttons">
 				<img class="music-button" id="music-button" src="images/playbutton.png" alt="Play Button">
-				<img class="question TextBox" id="question" src="images/help.png" alt="Help Button" onclick="displayhelp('helpbutton')"> 
+				<img class="question TextBox" id="question" src="images/helpbutton.png" alt="Help Button" onclick="displayhelp('helpbutton')"> 
 		</div>
 	<main>
-			<div class="contentarea" id="contentarea"></div>
-				<h1>What up, succa?</h1>
-				<p class="description"> Input your name and birthday to discover your succulent type!</p>
-				<div class="form" id="form">
-				<form action="index.html" method="post" name="form" id="inputform" autocomplete="on">
-				<input type="text" placeholder="First name" name="fName" id="firstName" required>
-				<input id="date" type="date" placeholder="mm/dd/yyyy" name="date" required>
-				<input id="submit" type="submit" value="Submit" required>
-				</form>
-		</div>
 
- <!-- zodiac result based on succulent match-->
-        <!-- Fishbone Orchid (Aries) -->
-        <div class="succEntry" id="fishbone">
-				<div class="row">
-				  <div class="col-2">
-					<div class="succPic">
-					  <img class="succPic" src="images/fishboneorchid-01.png" alt="Fishbone Orchid">
-					</div>
-				  </div>
-	  
-				  <div class="col-2">
-				</div>	  
-				<div class="row">
-				  <div class="col-4">
-					<p class="succBox" id="fishRead"></p>
-				  
-					<button class="closeSuccTextBox" onclick="clearZodiac(), showForm()">X</button>
-				  </div> 
-				</div>
-	  
-			  </div>
-			</div>
+ <!-- zodiac result based on succulent match-->        
+<!--  Buttons  --> 
+	<div class="succbuttonsleft" id="succbuttonsleft">
+		<a href="#succBox"><img src="images/fishboneorchid-01.png" alt="Fishbone Orchid" class="succicon" id="fish"></a>
+		<a href="#succBox"><img src="images/snakeplant-01.png" alt="Snake Plant" class="succicon" id="snakep"></a>
+		<a href="#succBox"><img src="images/starfishcactus-01.png" alt="Starfish Cactus" class="succicon" id="star"></a>
+		<a href="#succBox"><img src="images/houseleek-01.png" alt="House Leek" class="succicon" id="hleek"></a>
+		<a href="#succBox"><img src="images/moneyplant-01.png" alt="Money Plant" class="succicon" id="moneyp"></a>
+		<a href="#succBox"><img src="images/eastercactus.png" alt="Easter Cactus" class="succicon" id="easterc"></a>
+	</div>
+	<div class="succbuttonsright">
+		<a href="#succBox"><img src="images/mexicanfirecracker-01.png" alt="Mexican Firecracker" class="succicon" id="mexican"></a>
+		<a href="#succBox"><img src="images/sharkstooth-01.png" alt="Shark's Tooth" class="succicon" id="sharks"></a>
+		<a href="#succBox"><img src="images/buttonstrings-01.png" alt="String of Buttons" class="succicon"  id="string"></a>
+		<a href="#succBox"><img src="images/zebraplant-01.png" alt="Zebra Plant" class="succicon" id="zebrap"></a>
+		<a href="#succBox"><img src="images/aloe-01.png" alt="Aloe Plant" class="succicon" id="aloep"></a>
+		<a href="#succBox"><img src="images/panda-01.png" alt="Panda Plant" class="succicon" id="pandap"></a>
+	</div>
+	<div class="buttons" id="buttons">
+		<h1>What up, succa?</h1>
+		<p class="description"> Input your name and birthday to discover your succulent type!</p>
+	<div class="form" id="form">
+		<form action="index.html" method="post" name="form" id="inputform" autocomplete="on">
+		<input type="text" placeholder="First name" name="fName" id="firstName" required>
+		<input id="date" type="date" placeholder="mm/dd/yyyy" name="date" required>
+		<input id="submit" type="submit" value="Submit" required>
+		</form>
+	</div>
+	</div>	 
+	<div class="succEntry" id="fishbone">
+		<button class="closeSuccTextBox" onclick="clearZodiac(), showForm()">X</button>
+	<div class="row">
+	<div class="col-2">
+		
+	<div class="succPic">
+		<img class="succPic" src="images/fishboneorchid-01.png" alt="Fishbone Orchid">
+	</div>
+	</div>
+	<div class="col-2">
+	</div>	  
+	<div class="row">
+	<div class="col-4">
+		<p class="succBox" id="fishRead"></p>
+		
+	</div> 
+	</div>
+	</div>
+	</div>
+					
+	<!-- Snake Plant (Taurus) -->
+	<div class="succEntry" id="snake">
+		<button class="closeSuccTextBox" onclick="clearZodiac(), showForm()">X</button>
+	<div class="row">
+	<div class="col-2">
+	<div class="succPic">
+		<img class="succPic" src="images/snakeplant-01.png" alt="Snake Plant">
+	</div>
+	</div>
+	<div class="col-2">
+	</div>
+	</div>	  
+	<div class="row">
+	<div class="col-4">
+		<p class="succBox" id="snakeRead"></p>
+	</div> 
+	</div>
+	</div>
+			  
+	<!-- Starfish Cactus (Gemini) -->
+	<div class="succEntry" id="starfish">
+			<button class="closeSuccTextBox" onclick="clearZodiac(), showForm()">X</button>
+	<div class="row">
+	<div class="col-2">
+	<div class="succPic">
+		<img class="succPic" src="images/starfishcactus-01.png" alt="Starfish Cactus">
+	</div>
+	</div>
+	</div>	  
+	<div class="row">
+	<div class="col-4">
+		<p class="succBox" id="starRead"></p>
+	</div> 
+	</div>
+	</div>
+			  
+	<!-- House Leek (Cancer) -->
+	<div class="succEntry" id="leek">
+			<button class="closeSuccTextBox" onclick="clearZodiac(), showForm()">X</button>
+	<div class="row">
+	<div class="col-2">
+	<div class="succPic">
+		<img class="succPic" src="images/houseleek-01.png" alt="House Leek">
+	</div>
+	</div>
+	<div class="col-2">
+	</div>
+	</div>	  
+	<div class="row">
+	<div class="col-4">
+	<p class="succBox" id="leekRead"></p>
+	</div> 
+	</div>
+	</div>
+			  
+	<!-- Money Plant (Leo) -->
+	<div class="succEntry" id="money">
+			<button class="closeSuccTextBox" onclick="clearZodiac(), showForm()">X</button>
+	<div class="row">
+	<div class="col-2">
+	<div class="succPic">
+		<img class="succPic" src="images/moneyplant-01.png" alt="Money Plant">
+	</div>
+	</div>
+	<div class="col-2">
+	</div>
+	</div>	  
+	<div class="row">
+	<div class="col-4">
+		<p class="succBox" id="moneyRead"></p>
+	</div> 
+	</div>
+	</div>
+			  
+<!-- Easter Cactus (Virgo) -->
+<div class="succEntry" id="easter">
+		<button class="closeSuccTextBox" onclick="clearZodiac(), showForm()">X</button>
+<div class="row">
+<div class="col-2">
+<div class="succPic">
+	<img class="succPic" src="images/eastercactus.png" alt="Easter Cactus">
+</div>
+</div>
+<div class="col-2">
+</div>
+</div>	  
+<div class="row">
+<div class="col-4">
+	<p class="succBox" id="easterRead"></p>
+</div> 
+</div>
+</div>
+
+<!-- Mexican Firecracker (Libra) -->
+<div class="succEntry" id="firecracker">
+		<button class="closeSuccTextBox" onclick="clearZodiac(), showForm()">X</button>
+<div class="row">
+<div class="col-2">
+<div class="succPic">
+	<img class="succPic" src="images/mexicanfirecracker-01.png" alt="Mexican Firecracker">
+</div>
+</div>
+<div class="col-2">
+</div>
+</div>	  
+<div class="row">
+<div class="col-4">
+	<p class="succBox" id="firecrackerRead"></p>
+</div> 
+</div>
+</div>
+			  
+<!-- Shark's Tooth (Scorpio) -->
+<div class="succEntry" id="shark">
+		<button class="closeSuccTextBox" onclick="clearZodiac(), showForm()">X</button>
+<div class="row">
+<div class="col-2">
+<div class="succPic">
+	<img class="succPic" src="images/sharkstooth-01.png" alt="Shark's Tooth">
+</div>
+</div>
+<div class="col-2">
+</div>
+</div>	  
+<div class="row">
+ <div class="col-4">
+<p class="succBox" id="sharkRead"></p>
+ </div> 
+</div>
+ </div>
+			  
+ <!-- String of Buttons (Sagittarius) -->
+ <div class="succEntry" id="buttonstrings">
+		<button class="closeSuccTextBox" onclick="clearZodiac(), showForm()">X</button>
+<div class="row">
+<div class="col-2">
+<div class="succPic">
+	<img class="succPic" src="images/buttonstrings-01.png" alt="String of Buttons">
+</div>
+</div>
+<div class="col-2">
+</div>
+</div>	  
+<div class="row">
+<div class="col-4">
+	<p class="succBox" id="buttonstringsRead"></p>
+ </div> 
+</div>
+ </div>
+			  
+<!-- Zebra Plant (Capricorn) -->
+<div class="succEntry" id="zebra">
+		<button class="closeSuccTextBox" onclick="clearZodiac(), showForm()">X</button>
+ <div class="row">
+<div class="col-2">
+ <div class="succPic">
+	<img class="succPic" src="images/zebraplant-01.png" alt="Zebra Plant">
+</div>
+</div>
+<div class="col-2">
+</div>
+</div>	  
+<div class="row">
+<div class="col-4">
+	<p class="succBox" id="zebraRead"></p>
+</div> 
+</div>
+</div>
+			  
 			
-			  <!-- Snake Plant (Taurus) -->
-			  <div class="succEntry" id="snake">
-				  <div class="row">
-					<div class="col-2">
-					  <div class="succPic">
-						<img class="succPic" src="images/snakeplant-01.png" alt="Snake Plant">
-					  </div>
-					</div>
-		
-					<div class="col-2">
-					</div>
-				  </div>	  
-					<div class="row">
-					  <div class="col-4">
-						<p class="succBox" id="snakeRead"></p>
-					  
-						<button class="closeSucc TextBox" onclick="clearZodiac(), showForm()">X</button>
-					  </div> 
-					</div>
-		
-				  </div>
+<!-- Aloe (Aquarius) -->
+<div class="succEntry" id="aloe">
+		<button class="closeSuccTextBox" onclick="clearZodiac(), showForm()">X</button>
+ <div class="row">
+<div class="col-2">
+<div class="succPic">
+	<img class="succPic" src="images/aloe-01.png" alt="Aloe">
+</div>
+</div>
+<div class="col-2">
+</div>
+</div>	  
+<div class="row">
+<div class="col-4">
+	<p class="succBox" id="aloeRead"></p>
+</div> 
+</div>
+</div>
+			  
+			  
+<!-- Panda (Pisces) -->
+<div class="succEntry" id="panda">
+		<button class="closeSuccTextBox" onclick="clearZodiac(), showForm()">X</button>
+<div class="row">
+<div class="col-2">
+<div class="succPic">
+	<img class="succPic" src="images/panda-01.png" alt="Panda Plant">
+</div>
+</div>
+<div class="col-2">
+</div>
+</div>	  
+<div class="row">
+<div class="col-4">
+	<p class="succBox" id="pandaRead"></p>
+</div>
+</div>
+</div>
+			  
+ <!-- Help Button -->
+<div class="succEntry" id="helpbutton">
+<div class="row">
+<div class="col-2">
+</div>
+</div>
+	<p class="helpbutton" id="helpb"></p>
+	<button class="closesuccTextBox" onclick="clearZodiac(), showForm()">X</button>
+<div class="inputForm">
+	<form id="helpInfo">
+		<p>Not sure how to start? Type in your first name and enter in your birthday in the form above. Then click the "submit" button to discover your succulent type! All set? Close this box and enter your info in the form to get started!</p>
+	</form>
+</div>
+</div> 
+			  
+<!-- Audio that plays in the background -->
+<audio id="appMusic">
+	<source src="sounds/calm.wav" type="audio/wav">
+	<source src="sounds/calm.mp3" type="audio/mpeg">
+</audio>
 	  
-			  <!-- Starfish Cactus (Gemini) -->
-			  <div class="succEntry" id="starfish">
-				  <div class="row">
-					<div class="col-2">
-					  <div class="succPic">
-						<img class="succPic" src="images/starfishcactus-01.png" alt="Starfish Cactus">
-					  </div>
-					</div>
-				  
-	
-				  </div>	  
-					<div class="row">
-					  <div class="col-4">
-						<p class="succBox" id="starRead"></p>
-					  
-						<button class="closeSuccTextBox" onclick="clearZodiac(), showForm()">X</button>
-					  </div> 
-					</div>
-		
-				  </div>
+<!-- All the  sounds for when the icon box is opened --> 
+<audio id="fishAud">
+	<source src="sounds/fish.wav" type="audio/wav">
+	<source src="sounds/fish.mp3" type="audio/mpeg">
+</audio>
 	  
-			  <!-- House Leek (Cancer) -->
-			  <div class="succEntry" id="leek">
-				  <div class="row">
-					<div class="col-2">
-					  <div class="succPic">
-						<img class="succPic" src="images/houseleek-01.png" alt="House Leek">
-					  </div>
-					</div>
-				  
-		
-					<div class="col-2">
-					</div>
-				  </div>	  
-					<div class="row">
-					  <div class="col-4">
-						<p class="succBox" id="leekRead"></p>
-					  
-						<button class="closeSuccTextBox" onclick="clearZodiac(), showForm()">X</button>
-					  </div> 
-					</div>
-		
-			  </div>
+<audio id="snakeAud">
+	<source src="sounds/snake.wav" type="audio/wav">
+	<source src="sounds/snake.mp3"> 
+</audio>
 	  
-			  <!-- Money Plant (Leo) -->
-			  <div class="succEntry" id="money">
-				  <div class="row">
-					<div class="col-2">
-					  <div class="succPic">
-						<img class="succPic" src="images/moneyplant-01.png" alt="Money Plant">
-					  </div>
-					</div>
-				  
-		
-					<div class="col-2">
-					</div>
-				  </div>	  
-					<div class="row">
-					  <div class="col-4">
-						<p class="succBox" id="moneyRead"></p>
-					  
-						<button class="closeSuccTextBox" onclick="clearZodiac(), showForm()">X</button>
-					  </div> 
-					</div>
-		
-				  </div>
+<audio id="starAud">
+	<source src="sounds/star.wav" type="audio/wav">
+	<source src="sounds/star.mp3" type="audio/mpeg">
+</audio>
 	  
-			  <!-- Easter Cactus (Virgo) -->
-			  <div class="succEntry" id="easter">
-				  <div class="row">
-					<div class="col-2">
-					  <div class="succPic">
-						<img class="succPic" src="images/eastercactus.png" alt="Easter Cactus">
-					  </div>
-					</div>
-				  
-		
-					<div class="col-2">
-					</div>
-				  </div>	  
-					<div class="row">
-					  <div class="col-4">
-						<p class="succBox" id="easterRead"></p>
-					  
-						<button class="closesuccTextBox" onclick="clearZodiac(), showForm()">X</button>
-					  </div> 
-					</div>
-		
-				  </div>
-				</div>
-			  <!-- Mexican Firecracker (Libra) -->
-			  <div class="succEntry" id="firecracker">
-				  <div class="row">
-					<div class="col-2">
-					  <div class="succPic">
-						<img class="succPic" src="images/mexicanfirecracker-01.png" alt="Mexican Firecracker">
-					  </div>
-					</div>
-				  
-		
-					<div class="col-2">
-					</div>
-				  </div>	  
-					<div class="row">
-					  <div class="col-4">
-						<p class="succBox" id="firecrackerRead"></p>
-					  
-						<button class="closesuccTextBox" onclick="clearZodiac(), showForm()">X</button>
-					  </div> 
-					</div>
-		
-				  </div>
+<audio id="leekAud">
+	<source src="sounds/leek.wav" type="audio/wav">
+	<source src="sounds/leek.mp3" type="audio/mpeg">
+</audio>
 	  
-			  <!-- Shark's Tooth (Scorpio) -->
-			  <div class="succEntry" id="shark">
-				  <div class="row">
-					<div class="col-2">
-					  <div class="succPic">
-						<img class="succPic" src="images/sharkstooth-01.png" alt="Shark's Tooth">
-					  </div>
-					</div>
-				 
-		
-					<div class="col-2">
-					</div>
-				  </div>	  
-					<div class="row">
-					  <div class="col-4">
-						<p class="succBox" id="sharkRead"></p>
-					  
-						<button class="closesuccTextBox" onclick="clearZodiac(), showForm()">X</button>
-					  </div> 
-					</div>
-		
-				  </div>
+<audio id="moneyAud">
+	<source src="sounds/money.wav" type="audio/wav">
+	<source src="sounds/money.mp3" type="audio/mpeg">
+</audio>
 	  
-			  <!-- String of Buttons (Sagittarius) -->
-			  <div class="succEntry" id="buttonstrings">
-				  <div class="row">
-					<div class="col-2">
-					  <div class="succPic">
-						<img class="succPic" src="images/buttonstrings-01.png" alt="String of Buttons">
-					  </div>
-					</div>
-				  
-		
-					<div class="col-2">
-					</div>
-				  </div>	  
-					<div class="row">
-					  <div class="col-4">
-						<p class="succBox" id="buttonstringsRead"></p>
-					  
-						<button class="closesuccTextBox" onclick="clearZodiac(), showForm()">X</button>
-					  </div> 
-					</div>
-		
-				  </div>
+<audio id="easterAud">
+	<source src="sounds/easter.wav" type="audio/wav">
+	<source src="sounds/easter.mp3" type="audio/mpeg">
+</audio>
 	  
-			  <!-- Zebra Plant (Capricorn) -->
-			  <div class="succEntry" id="zebra">
-				  <div class="row">
-					<div class="col-2">
-					  <div class="succPic">
-						<img class="succPic" src="images/zebraplant-01.png" alt="Zebra Plant">
-					  </div>
-					</div>
-				  
-		
-					<div class="col-2">
-					</div>
-				  </div>	  
-					<div class="row">
-					  <div class="col-4">
-						<p class="succBox" id="zebraRead"></p>
-					  
-						<button class="closesuccTextBox" onclick="clearZodiac(), showForm()">X</button>
-					  </div> 
-					</div>
-		
-				  </div>
+<audio id="mexicanAud">
+	<source src="sounds/mexican.wav" type="audio/wav">
+	<source src="sounds/mexican.mp3" type="audio/mpeg">
+</audio>
 	  
+<audio id="sharkAud">
+	<source src="sounds/shark.wav" type="audio/wav">
+	<source src="sounds/shark.mp3" type="audio/mpeg">
+</audio>
 	  
-			  <!-- Aloe (Aquarius) -->
-			  <div class="succEntry" id="aloe">
-				  <div class="row">
-					<div class="col-2">
-					  <div class="succPic">
-						<img class="succPic" src="images/aloe-01.png" alt="Aloe">
-					  </div>
-					</div>
-				 
-		
-					<div class="col-2">
-					</div>
-				  </div>	  
-					<div class="row">
-					  <div class="col-4">
-						<p class="succBox" id="aloeRead"></p>
-					  
-						<button class="closesuccTextBox" onclick="clearZodiac(), showForm()">X</button>
-					  </div> 
-					</div>
-		
-				  </div>
+<audio id="buttonsAud">
+	<source src="sounds/buttons.wav" type="audio/wav">
+	<source src="sounds/buttons.mp3" type="audio/mpeg">
+</audio>
 	  
+<audio id="zebraAud">
+	<source src="sounds/zebra.wav" type="audio/wav">
+	<source src="sounds/zebra.wav" type="audio/mpeg">
+</audio>
 	  
-			  <!-- Panda (Pisces) -->
-			  <div class="succEntry" id="panda">
-				  <div class="row">
-					<div class="col-2">
-					  <div class="succPic">
-						<img class="succPic" src="images/panda-01.png" alt="Panda Plant">
-					  </div>
-					</div>
-				  
-		
-					<div class="col-2">
-					</div>
-				  </div>	  
-					<div class="row">
-					  <div class="col-4">
-						<p class="succBox" id="pandaRead"></p>
-					  
-						<button class="closesuccTextBox" onclick="clearZodiac(), showForm()">X</button>
-					  </div>
-					</div>
-		
-				</div>
+<audio id="aloeAud">
+	<source src="sounds/aloe.wav" type="audio/wav">
+	<source src="sounds/aloe.mp3" type="audio/mpeg">
+</audio>
 	  
+<audio id="pandaAud">
+	<source src="sounds/panda.wav" type="audio/wav">
+	<source src="sounds/panda.mp3" type="audio/mpeg">
+</audio>
 	  
-			  <!-- Help Button -->
-			  <div class="succEntry" id="helpbutton">
-				<div class="row">
-				  <div class="col-2">
-				  </div>
-					</div>
-					<p class="helpbutton" id="helpb"></p>
-					<div class="inputForm">
-					  <form id="helpInfo">
-						<p>Not sure how to start? Type in your first name and enter in your birthday in the form above. Then click the "submit" button to discover your succulent type! All set? Close this box and enter your info in the form to get started!</p>
-					  </form>
-					</div>
-					<button class="closesuccTextBox" onclick="clearZodiac(), showForm()">X</button>
-				  </div> 
-	  
-	  
-			  <!--  Buttons at bottom of page --> 
-			  <div class="buttons">
-				<div class="succbuttonsleft" id="succbuttonsleft">
-				  <a href="#succBox"><img src="images/fishboneorchid-01.png" alt="Fishbone Orchid" class="succicon" id="fish"></a>
-				  <a href="#succBox"><img src="images/snakeplant-01.png" alt="Snake Plant" class="succicon" id="snakep"></a>
-				  <a href="#succBox"><img src="images/starfishcactus-01.png" alt="Starfish Cactus" class="succicon" id="star"></a>
-				  <a href="#succBox"><img src="images/houseleek-01.png" alt="House Leek" class="succicon" id="hleek"></a>
-				  <a href="#succBox"><img src="images/moneyplant-01.png" alt="Money Plant" class="succicon" id="moneyp"></a>
-				  <a href="#succBox"><img src="images/eastercactus.png" alt="Easter Cactus" class="succicon" id="easterc"></a>
-				</div>
-				<div class="succbuttonsright">
-				  <a href="#succBox"><img src="images/mexicanfirecracker-01.png" alt="Mexican Firecracker" class="succicon" id="mexican"></a>
-				  <a href="#succBox"><img src="images/sharkstooth-01.png" alt="Shark's Tooth" class="succicon" id="sharks"></a>
-				  <a href="#succBox"><img src="images/buttonstrings-01.png" alt="String of Buttons" class="succicon"  id="string"></a>
-				  <a href="#succBox"><img src="images/zebraplant-01.png" alt="Zebra Plant" class="succicon" id="zebrap"></a>
-				  <a href="#succBox"><img src="images/aloe-01.png" alt="Aloe Plant" class="succicon" id="aloep"></a>
-				  <a href="#succBox"><img src="images/panda-01.png" alt="Panda Plant" class="succicon" id="pandap"></a>
-				</div>
-			</div>
-	  
-				<!-- Audio that plays in the background -->
-				<audio id="appMusic">
-				  <source src="sounds/calm.wav" type="audio/wav">
-				  <source src="sounds/calm.mp3" type="audio/mpeg">
-				</audio>
-	  
-				<!-- All the  sounds for when the icon box is opened --> 
-				<audio id="fishAud">
-				  <source src="sounds/fish.wav" type="audio/wav">
-				  <source src="sounds/fish.mp3" type="audio/mpeg">
-				</audio>
-	  
-				<audio id="snakeAud">
-				  <source src="sounds/snake.wav" type="audio/wav">
-				  <source src="sounds/snake.mp3" type="audio/mpeg">
-				</audio>
-	  
-				<audio id="starAud">
-				  <source src="sounds/star.wav" type="audio/wav">
-				  <source src="sounds/star.mp3" type="audio/mpeg">
-				</audio>
-	  
-				<audio id="leekAud">
-				  <source src="sounds/leek.wav" type="audio/wav">
-				  <source src="sounds/leek.mp3" type="audio/mpeg">
-				</audio>
-	  
-				<audio id="moneyAud">
-				  <source src="sounds/money.wav" type="audio/wav">
-				  <source src="sounds/money.mp3" type="audio/mpeg">
-				</audio>
-	  
-				<audio id="easterAud">
-				  <source src="sounds/easter.wav" type="audio/wav">
-				  <source src="sounds/easter.mp3" type="audio/mpeg">
-				</audio>
-	  
-				<audio id="mexicanAud">
-				  <source src="sounds/mexican.wav" type="audio/wav">
-				  <source src="sounds/mexican.mp3" type="audio/mpeg">
-				</audio>
-	  
-				<audio id="sharkAud">
-				  <source src="sounds/shark.wav" type="audio/wav">
-				  <source src="sounds/shark.mp3" type="audio/mpeg">
-				</audio>
-	  
-				<audio id="buttonsAud">
-				  <source src="sounds/buttons.wav" type="audio/wav">
-				  <source src="sounds/buttons.mp3" type="audio/mpeg">
-				</audio>
-	  
-				<audio id="zebraAud">
-				  <source src="sounds/zebra.wav" type="audio/wav">
-				  <source src="sounds/zebra.wav" type="audio/mpeg">
-				</audio>
-	  
-				<audio id="aloeAud">
-				  <source src="sounds/aloe.wav" type="audio/wav">
-				  <source src="sounds/aloe.mp3" type="audio/mpeg">
-				</audio>
-	  
-				<audio id="pandaAud">
-				  <source src="sounds/panda.wav" type="audio/wav">
-				  <source src="sounds/panda.mp3" type="audio/mpeg">
-				</audio>
-	  
-				<audio id="helpAud">
-				  <source src="sounds/help.wav" type="audio/wav">
-				  <source src="sounds/help.mp3" type="audio/mpeg">
-				</audio>
-		</main>
-		  <script src="main.js"></script>
-		</body>
-	  </html>
+<audio id="helpAud">
+	<source src="sounds/help.wav" type="audio/wav">
+	<source src="sounds/help.mp3" type="audio/mpeg">
+</audio>
+</main>
+<script src="main.js"></script>
+</body>
+</html>
 	  

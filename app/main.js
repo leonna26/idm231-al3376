@@ -8,14 +8,14 @@
   function PlayPause() {  
     var which_state = music_button.getAttribute('src');
 
-    if (which_state === 'images/pause.png') {
+    if (which_state === 'images/pausebutton.png') {
       app_music.pause();
       music_button.setAttribute('src', 'images/playbutton.png')
       document.getElementById('appMusic').innerHTML = 'Play Music';
       console.log('music paused');
     } else {
       app_music.play();
-      music_button.setAttribute('src', 'images/pause.png')
+      music_button.setAttribute('src', 'images/pausebutton.png')
       document.getElementById('appMusic').innerHTML = 'Pause Music';
       console.log('music playing');
     }
@@ -130,34 +130,34 @@ function getPhrase(succphrases) {
   var phrases;
   if (succT == "Money Plant"){
     phrases = [
-      /* 0  */"Ooh!, " + name + ", looks like you are an " + succT,
-      /* 1  */"Cool!, you are an " + succT + ", " + name,
-      /* 2  */"Amazing! " + name + ", you're an " + succT,
-      /* 3  */"What's up, succa! You are an " + succT,
-      /* 4  */"This is way cool, " + name + ", you're an " + succT,
-      /* 5  */"Awesome sauce," + name + ", you're an " + succT,
-      /* 6  */"What do you know, " + name + " you are a " + succT,
-      /* 7  */"Look at this, " + name + "you are an" + succT,
-      /* 8  */name + ", This is pretty interesting, friend! You are an " + succT,
-      /* 9  */"Guess what, " + name + "? You're an " + succT,
-      /* 10 */"Yer an " + succT + ", Harry!... I mean " + name,
-      /* 11 */"I wish I could be an " + succT + " just like you, " + name
+      /* 0  */"Ooh, " + name, 
+      /* 1  */"Cool, " + name,
+      /* 2  */"Amazing, " + name,
+      /* 3  */"What's up, succa! Or " + name,
+      /* 4  */"This is way cool, " + name,
+      /* 5  */"Awesome sauce, " + name,
+      /* 6  */"What do you know, " + name,
+      /* 7  */"Look at this, " + name,
+      /* 8  */name + ", this is pretty interesting, friend!",
+      /* 9  */"Guess what, " + name,
+      /* 10 */"You're results are in, " + name,
+      /* 11 */"Fascinating, " + name,
     ];
   }
   else {
     phrases = [
-      /* 0  */"Ah, " + name + ", looks like you are a " + succT,
-      /* 1  */"Hmm, seems like you are a " + succT + ", " + name,
-      /* 2  */"How interesting! " + name + ", it turns out you're a " + succT,
-      /* 3  */"Not bad, " + name + "! You are a " + succT,
-      /* 4  */"I'm not sure how you'll take this, " + name + ", but you're a " + succT,
-      /* 5  */"Now " + name + ", you'd better sit down for this: you're a " + succT,
-      /* 6  */"Well well well, if it isn't " + name + " coming in as a " + succT,
-      /* 7  */"The results are in " + name + ": You are most similar to a " + succT,
-      /* 8  */name + ", I'm shocked! You are, in fact, a " + succT,
-      /* 9  */"Guess what, " + name + "? You're a " + succT,
-      /* 10 */"Yer a " + succT + ", " + name,
-      /* 11 */"I wish I could be a " + succT + " just like you, " + name
+      /* 0  */"Ooh, " + name, 
+      /* 1  */"Cool, " + name,
+      /* 2  */"Amazing, " + name,
+      /* 3  */"What's up, succa! Or " + name,
+      /* 4  */"This is way cool, " + name,
+      /* 5  */"Awesome sauce, " + name,
+      /* 6  */"What do you know, " + name,
+      /* 7  */"Look at this, " + name,
+      /* 8  */name + ", this is pretty interesting, friend!",
+      /* 9  */"Guess what, " + name,
+      /* 10 */"You're results are in, " + name,
+      /* 11 */"Fascinating, " + name,
     ];
   }
 
@@ -186,7 +186,7 @@ function displayhelp(succ) {
       if (name == "") {
         fishRead.textContent = "Fishbone Orchid - also known as Ric Rac or Zigzag. Fast growing, ambitious. With your climbing stems you know you'll go far in life. You are fierce on the outside but gentle on the inside - your outer petals are dark violet, and inner white petals.";
       } else {
-        fishRead.textContent = phrase + "Fishbone Orchid - also known as Ric Rac or Zigzag. Fast growing, ambitious. With your climbing stems you know you'll go far in life. You are fierce on the outside but gentle on the inside - your outer petals are dark violet, and inner white petals.";
+        fishRead.textContent = phrase + ". You are a Fishbone Orchid - also known as Ric Rac or Zigzag. Fast growing, ambitious. With your climbing stems you know you'll go far in life. You are fierce on the outside but gentle on the inside - your outer petals are dark violet, and inner white petals.";
       }
 
       showZodiac(succ);
@@ -201,7 +201,7 @@ function displayhelp(succ) {
       if (name == "") {
         snakeRead.textContent = "Snake Plant. You are simple and anything goes. You are tough on the outside but easily swayed by your feelings and emotions.";
       } else {
-        snakeRead.textContent = phrase + "Snake Plant. You are simple and anything goes. You are tough on the outside but easily swayed by your feelings and emotions.";
+        snakeRead.textContent = phrase + ". You are a Snake Plant. You are simple and anything goes. You are tough on the outside but easily swayed by your feelings and emotions.";
       }
 
       showZodiac(succ);
@@ -215,7 +215,7 @@ function displayhelp(succ) {
       if (name == "") {
         starRead.textContent = "Starfish Cactus - also known as Carrion Flower, Star Flower, and Toad Cactus. You are special. Just as your flowers give off an unpleasant smell, others never know what you're up to. You are uniquely attractive - attracting flies and other insects, and it helps pollinate the blooms.";
       } else {
-        starRead.textContent = phrase + "Starfish Cactus - also known as Carrion Flower, Star Flower, and Toad Cactus. You are special. Just as your flowers give off an unpleasant smell, others never know what you're up to. You are uniquely attractive - attracting flies and other insects, and it helps pollinate the blooms.";
+        starRead.textContent = phrase + ". You got Starfish Cactus - also known as Carrion Flower, Star Flower, and Toad Cactus. You are special. Just as your flowers give off an unpleasant smell, others never know what you're up to. You are uniquely attractive - attracting flies and other insects, and it helps pollinate the blooms.";
       }
 
       showZodiac(succ);
@@ -229,7 +229,7 @@ function displayhelp(succ) {
       if (name == "") {
         leekRead.textContent = "House Leek - also known as Hen and Chicks, Old Man and Woman, and Roof House Leek. You love to care for others. This plant is nicknamed Hen and Chicks because mother plants cluster around its base like chicks." ;
       } else {
-        leekRead.textContent = phrase + "House Leek - also known as Hen and Chicks, Old Man and Woman, and Roof House Leek. You love to care for others. This plant is nicknamed Hen and Chicks because mother plants cluster around its base like chicks.";
+        leekRead.textContent = phrase + ". You got House Leek - also known as Hen and Chicks, Old Man and Woman, and Roof House Leek. You love to care for others. This plant is nicknamed Hen and Chicks because mother plants cluster around its base like chicks.";
       }
 
       showZodiac(succ);
@@ -243,7 +243,7 @@ function displayhelp(succ) {
       if (name == "") {
         moneyRead.textContent = "Money Plant - also known as Jade Plant. You're often considered one of the 'old fashioned' of succulents, but don't let that bring you down. You are resilient, and able to thrive in even harsh environments." ;
       } else {
-        moneyRead.textContent = phrase + "Money Plant - also known as Jade Plant. You're often considered one of the 'old fashioned' of succulents, but don't let that bring you down. You are resilient, and able to thrive in even harsh environments.";
+        moneyRead.textContent = phrase + ". You got the Money Plant - also known as Jade Plant. You're often considered one of the 'old fashioned' of succulents, but don't let that bring you down. You are resilient, and able to thrive in even harsh environments.";
       }
 
       showZodiac(succ);
@@ -257,7 +257,7 @@ function displayhelp(succ) {
       if (name == "") {
         easterRead.textContent = "Easter Cactus, also known as the Spring Cactus. You are full of bloom, full of joy. Full of color bursting bright. After winter months, you speak of spring and good times coming, joys ahead. Positive vibes all around.";
       } else {
-        easterRead.textContent = phrase + "Easter Cactus, also known as the Spring Cactus. You are full of bloom, full of joy. Full of color bursting bright. After winter months, you speak of spring and good times coming, joys ahead. Positive vibes all around.";
+        easterRead.textContent = phrase + ". Your result is the Easter Cactus, also known as the Spring Cactus. You are full of bloom, full of joy. Full of color bursting bright. After winter months, you speak of spring and good times coming, joys ahead. Positive vibes all around.";
       }
 
       showZodiac(succ);
@@ -269,9 +269,9 @@ function displayhelp(succ) {
       clearZodiac();
 
       if (name == "") {
-        firecrackerRead.textContent = "Mexican Firecracker Contrary to its name, this is a slow growing plant. But as it grows, it shoots into many and spreads out. Your time will come, my friend. Slow progress is not no progress.";
+        firecrackerRead.textContent = "Mexican Firecracker. Contrary to its name, this is a slow growing plant. But as it grows, it shoots into many and spreads out. Your time will come, my friend. Slow progress is not no progress.";
       } else {
-        firecrackerRead.textContent = phrase + "Mexican Firecracker Contrary to its name, this is a slow growing plant. But as it grows, it shoots into many and spreads out. Your time will come, my friend. Slow progress is not no progress.";
+        firecrackerRead.textContent = phrase + ". You got the Mexican Firecracker! Contrary to its name, this is a slow growing plant. But as it grows, it shoots into many and spreads out. Your time will come, my friend. Slow progress is not no progress.";
       }
 
       showZodiac(succ);
@@ -285,7 +285,7 @@ function displayhelp(succ) {
       if (name == "") {
         sharkRead.textContent = "Shark's Tooth. You grow in the wild, dry, rocks. Though you flush red when faced with drought and the heat of the sun, you  endure difficulties with strength.";
       } else {
-        sharkRead.textContent = phrase + "Shark's Tooth. You grow in the wild, dry, rocks. Though you flush red when faced with drought and the heat of the sun, you  endure difficulties with strength.";
+        sharkRead.textContent = phrase + ". You got Shark's Tooth. You grow in the wild, dry, rocks. Though you flush red when faced with drought and the heat of the sun, you endure difficulties with strength.";
       }
 
       showZodiac(succ);
@@ -299,7 +299,7 @@ function displayhelp(succ) {
       if (name == "") {
         buttonstringsRead.textContent = "String of Buttons - also known as Baby's Necklace, Necklace Vine, and Stacked Crassula. This fast growing plant has rosy edges, which contrasts with its gentle personality. Its colonizing qualities means it is aggressive and wants to spread its influence.";
       } else {
-        buttonstringsRead.textContent = phrase + "String of Buttons - also known as Baby's Necklace, Necklace Vine, and Stacked Crassula. This fast growing plant has rosy edges, which contrasts with its gentle personality. Its colonizing qualities means it is aggressive and wants to spread its influence.";
+        buttonstringsRead.textContent = phrase + ". You got the String of Buttons - also known as Baby's Necklace, Necklace Vine, and Stacked Crassula. This fast growing plant has rosy edges, which contrasts with its gentle personality. Its colonizing qualities means it is aggressive and wants to spread its influence.";
       }
 
       showZodiac(succ);
@@ -313,7 +313,7 @@ function displayhelp(succ) {
       if (name == "") {
         zebraRead.textContent = "Zebra Plant. You are no fuss, simple to love and be cared for. You're always a go-to for your unique and cheerful pattern, and you love making people happy.";
       } else {
-        zebraRead.textContent = phrase + "Zebra Plant. You are no fuss, simple to love and be cared for. You're always a go-to for your unique and cheerful pattern, and you love making people happy.";
+        zebraRead.textContent = phrase + ". You got the Zebra Plant. You are no fuss, simple to love and be cared for. You're always a go-to for your unique and cheerful pattern, and you love making people happy.";
       }
 
       showZodiac(succ);
@@ -327,7 +327,7 @@ function displayhelp(succ) {
       if (name == "") {
         aloeRead.textContent = "Aloe. You are known to be spiky, spunky, and dramatic. Yet you are attractive and gifted in a lot of things, providing those around you with emotional, mental, and practical love and care.";
       } else {
-        aloeRead.textContent = phrase + "Aloe. You are known to be spiky, spunky, and dramatic. Yet you are attractive and gifted in a lot of things, providing those around you with emotional, mental, and practical love and care.";
+        aloeRead.textContent = phrase + ". A-loe? Do you hear me? You got Aloe! You are known to be spiky, spunky, and dramatic. Yet you are attractive and gifted in a lot of things, providing those around you with emotional, mental, and practical love and care.";
       }
 
       showZodiac(succ);
@@ -341,7 +341,7 @@ function displayhelp(succ) {
       if (name == "") {
         pandaRead.textContent = "Panda Plant, also known as Pussy Ears. You are gentle, kind, soft around the edges. You bring harmony and ease to all you encounter.";
       } else {
-        pandaRead.textContent = phrase + "Panda Plant, also known as Pussy Ears. You are gentle, kind, soft around the edges. You bring harmony and ease to all you encounter.";
+        pandaRead.textContent = phrase + ". You got the Panda Plant, also known as Pussy Ears. You are gentle, kind, soft around the edges. You bring harmony and ease to all you encounter.";
       }
 
       showZodiac(succ);
